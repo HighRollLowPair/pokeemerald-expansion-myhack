@@ -10,6 +10,16 @@
       "secondary_tileset": "gTileset_Fareward",
       "border_filepath": "data/layouts/Fareward/border.bin",
       "blockdata_filepath": "data/layouts/Fareward/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYER_HOUSE1F",
+      "name": "PlayerHouse1F_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PlayerHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/PlayerHouse1F/map.bin"
     }
   ]
 }

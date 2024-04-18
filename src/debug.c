@@ -1268,7 +1268,7 @@ static u8 Debug_CheckToggleFlags(u8 id)
             result = FlagGet(FLAG_SYS_B_DASH);
             break;
         case DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_LOCATIONS:
-            result = FlagGet(FLAG_VISITED_LITTLEROOT_TOWN) &&
+            result = FlagGet(FLAG_VISITED_FAREWARD) &&
                 FlagGet(FLAG_VISITED_OLDALE_TOWN) &&
                 FlagGet(FLAG_VISITED_DEWFORD_TOWN) &&
                 FlagGet(FLAG_VISITED_LAVARIDGE_TOWN) &&
@@ -2769,7 +2769,7 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
     if (FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER))
     {
         PlaySE(SE_PC_OFF);
-        FlagClear(FLAG_VISITED_LITTLEROOT_TOWN);
+        FlagClear(FLAG_VISITED_FAREWARD);
         FlagClear(FLAG_VISITED_OLDALE_TOWN);
         FlagClear(FLAG_VISITED_DEWFORD_TOWN);
         FlagClear(FLAG_VISITED_LAVARIDGE_TOWN);
@@ -2791,7 +2791,7 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
     else
     {
         PlaySE(SE_PC_LOGIN);
-        FlagSet(FLAG_VISITED_LITTLEROOT_TOWN);
+        FlagSet(FLAG_VISITED_FAREWARD);
         FlagSet(FLAG_VISITED_OLDALE_TOWN);
         FlagSet(FLAG_VISITED_DEWFORD_TOWN);
         FlagSet(FLAG_VISITED_LAVARIDGE_TOWN);
@@ -5069,7 +5069,7 @@ static void DebugAction_BerryFunctions_Weeds(u8 taskId)
 
 static void DebugAction_Party_MoveReminder(u8 taskId)
 {
-    Debug_DestroyMenu_Full_Script(taskId, FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon);
+    // Debug_DestroyMenu_Full_Script(taskId, FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon);
 }
 
 static void DebugAction_Party_HatchAnEgg(u8 taskId)

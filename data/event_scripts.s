@@ -106,6 +106,58 @@ gStdScripts_End::
 
 	.include "data/maps/Fareward/scripts.inc"
 
+	.include "data/maps/BattleColosseum_2P/scripts.inc"
+	.include "data/maps/BattleColosseum_4P/scripts.inc"
+	.include "data/maps/BattlePyramidSquare01/scripts.inc"
+	.include "data/maps/BattleFrontier_OutsideWest/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleTowerLobby/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleTowerElevator/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleTowerCorridor/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleTowerBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_OutsideEast/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleTowerMultiPartnerRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleTowerMultiCorridor/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleTowerMultiBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleDomeLobby/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleDomeCorridor/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleDomePreBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleDomeBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePalaceLobby/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePalaceCorridor/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePalaceBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePyramidLobby/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePyramidFloor/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePyramidTop/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleArenaLobby/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleArenaCorridor/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleArenaBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleFactoryLobby/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattleFactoryBattleRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePikeLobby/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePikeCorridor/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePikeThreePathRoom/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePikeRoomWildMons/scripts.inc"
+	.include "data/maps/BattleFrontier_RankingHall/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge1/scripts.inc"
+	.include "data/maps/BattleFrontier_ExchangeServiceCorner/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge2/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge3/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge4/scripts.inc"
+	.include "data/maps/BattleFrontier_ScottsHouse/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge5/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge6/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge7/scripts.inc"
+	.include "data/maps/BattleFrontier_ReceptionGate/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge8/scripts.inc"
+	.include "data/maps/BattleFrontier_Lounge9/scripts.inc"
+	.include "data/maps/BattleFrontier_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/BattleFrontier_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/BattleFrontier_Mart/scripts.inc"
+	.include "data/scripts/shared_secret_base.inc"
+
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/new_game.inc"
@@ -311,8 +363,6 @@ EventScript_HideMrBriney::
 	return
 
 RusturfTunnel_EventScript_SetRusturfTunnelOpen::
-	removeobject LOCALID_WANDAS_BF
-	removeobject LOCALID_WANDA
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDA
 	setvar VAR_RUSTURF_TUNNEL_STATE, 6
@@ -335,8 +385,6 @@ Movement_UnusedBoardFerry:
 	step_end
 
 Common_EventScript_FerryDepartIsland::
-	call_if_eq VAR_FACING, DIR_SOUTH, Ferry_EventScript_DepartIslandSouth
-	call_if_eq VAR_FACING, DIR_WEST, Ferry_EventScript_DepartIslandWest
 	delay 30
 	hideobjectat OBJ_EVENT_ID_PLAYER, 0
 	call Common_EventScript_FerryDepart
@@ -549,6 +597,7 @@ EventScript_VsSeekerChargingDone::
 	releaseall
 	end
 
+	.include "data/text/misc.inc"
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
 	.include "data/scripts/abnormal_weather.inc"
@@ -604,3 +653,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/PlayerHouse1F/scripts.inc"

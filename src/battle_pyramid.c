@@ -1639,18 +1639,14 @@ u8 GetPyramidRunMultiplier(void)
 
 u8 InBattlePyramid(void)
 {
-    if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
-        return 1;
-    else if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_TOP)
-        return 2;
-    else
-        return FALSE;
+    // removed
+    return FALSE;
 }
 
 bool8 InBattlePyramid_(void)
 {
-    return gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
-        || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_TOP;
+    // removed
+    return FALSE;
 }
 
 void PausePyramidChallenge(void)
@@ -1739,55 +1735,7 @@ static u16 GetUniqueTrainerId(u8 objectEventId)
 
 void GenerateBattlePyramidFloorLayout(u16 *backupMapData, bool8 setPlayerPosition)
 {
-    int y, x;
-    int i;
-    u8 entranceSquareId, exitSquareId;
-    u8 *floorLayoutOffsets = AllocZeroed(NUM_PYRAMID_FLOOR_SQUARES);
-
-    GetPyramidFloorLayoutOffsets(floorLayoutOffsets);
-    GetPyramidEntranceAndExitSquareIds(&entranceSquareId, &exitSquareId);
-    for (i = 0; i < NUM_PYRAMID_FLOOR_SQUARES; i++)
-    {
-        u16 *map;
-        int yOffset, xOffset;
-        const struct MapLayout *mapLayout = gMapLayouts[floorLayoutOffsets[i] + LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR];
-        const u16 *layoutMap = mapLayout->map;
-
-        gBackupMapLayout.map = backupMapData;
-        gBackupMapLayout.width = mapLayout->width * PYRAMID_FLOOR_SQUARES_WIDE + MAP_OFFSET_W;
-        gBackupMapLayout.height = mapLayout->height * PYRAMID_FLOOR_SQUARES_HIGH + MAP_OFFSET_H;
-        map = backupMapData;
-        yOffset = ((i / PYRAMID_FLOOR_SQUARES_WIDE * mapLayout->height) + MAP_OFFSET) * gBackupMapLayout.width;
-        xOffset = (i % PYRAMID_FLOOR_SQUARES_WIDE * mapLayout->width) + MAP_OFFSET;
-        map += yOffset + xOffset;
-        for (y = 0; y < mapLayout->height; y++)
-        {
-            for (x = 0; x < mapLayout->width; x++)
-            {
-                if ((layoutMap[x] & MAPGRID_METATILE_ID_MASK) != METATILE_BattlePyramid_Exit)
-                {
-                    map[x] = layoutMap[x];
-                }
-                else if (i != exitSquareId)
-                {
-                    if (i == entranceSquareId && setPlayerPosition == FALSE)
-                    {
-                        gSaveBlock1Ptr->pos.x = (mapLayout->width * (i % PYRAMID_FLOOR_SQUARES_WIDE)) + x;
-                        gSaveBlock1Ptr->pos.y = (mapLayout->height * (i / PYRAMID_FLOOR_SQUARES_WIDE)) + y;
-                    }
-                    map[x] = (layoutMap[x] & (MAPGRID_ELEVATION_MASK | MAPGRID_COLLISION_MASK)) | METATILE_BattlePyramid_Floor;
-                }
-                else
-                {
-                    map[x] = layoutMap[x];
-                }
-            }
-            map += MAP_OFFSET_W + (mapLayout->width * PYRAMID_FLOOR_SQUARES_WIDE);
-            layoutMap += mapLayout->width;
-        }
-    }
-    RunOnLoadMapScript();
-    Free(floorLayoutOffsets);
+    // removed
 }
 
 void LoadBattlePyramidObjectEventTemplates(void)
@@ -2071,45 +2019,7 @@ static bool8 TrySetPyramidObjectEventPositionInSquare(u8 objType, u8 *floorLayou
 
 static bool8 TrySetPyramidObjectEventPositionAtCoords(u8 objType, u8 x, u8 y, u8 *floorLayoutOffsets, u8 squareId, u8 objectEventId)
 {
-    int i, j;
-    const struct MapHeader *mapHeader;
-    struct ObjectEventTemplate *floorEvents = gSaveBlock1Ptr->objectEventTemplates;
-
-    mapHeader = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(BATTLE_PYRAMID_SQUARE01), floorLayoutOffsets[squareId] + MAP_NUM(BATTLE_PYRAMID_SQUARE01));
-    for (i = 0; i < mapHeader->events->objectEventCount; i++)
-    {
-        if (mapHeader->events->objectEvents[i].x != x || mapHeader->events->objectEvents[i].y != y)
-            continue;
-
-        if (objType != OBJ_TRAINERS || mapHeader->events->objectEvents[i].graphicsId == OBJ_EVENT_GFX_ITEM_BALL)
-        {
-            if (objType != OBJ_ITEMS || mapHeader->events->objectEvents[i].graphicsId != OBJ_EVENT_GFX_ITEM_BALL)
-                continue;
-        }
-
-        // Ensure an object wasn't previously placed in the exact same position.
-        for (j = 0; j < objectEventId; j++)
-        {
-            if (floorEvents[j].x == x + ((squareId % 4) * 8) && floorEvents[j].y == y + ((squareId / 4) * 8))
-                break;
-        }
-
-        if (j == objectEventId)
-        {
-            floorEvents[objectEventId] = mapHeader->events->objectEvents[i];
-            floorEvents[objectEventId].x += (squareId % 4) * 8;
-            floorEvents[objectEventId].y += (squareId / 4) * 8;
-            floorEvents[objectEventId].localId = objectEventId + 1;
-            if (floorEvents[objectEventId].graphicsId != OBJ_EVENT_GFX_ITEM_BALL)
-            {
-                i = GetUniqueTrainerId(objectEventId);
-                floorEvents[objectEventId].graphicsId = GetBattleFacilityTrainerGfxId(i);
-                gSaveBlock2Ptr->frontier.trainerIds[objectEventId] = i;
-            }
-            return FALSE;
-        }
-    }
-
+    // removed
     return TRUE;
 }
 
