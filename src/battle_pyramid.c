@@ -1590,40 +1590,7 @@ static void UNUSED BattlePyramidRetireChallenge(void)
     return;
 }
 
-static u16 GetUniqueTrainerId(u8 objectEventId)
-{
-    int i;
-    u16 trainerId;
-    u32 lvlMode = gSaveBlock2Ptr->frontier.lvlMode;
-    u32 challengeNum = gSaveBlock2Ptr->frontier.pyramidWinStreaks[lvlMode] / FRONTIER_STAGES_PER_CHALLENGE;
-    u32 floor = gSaveBlock2Ptr->frontier.curChallengeBattleNum;
-    if (floor == FRONTIER_STAGES_PER_CHALLENGE)
-    {
-        do
-        {
-            trainerId = GetRandomScaledFrontierTrainerId(challengeNum + 1, floor);
-            for (i = 0; i < objectEventId; i++)
-            {
-                if (gSaveBlock2Ptr->frontier.trainerIds[i] == trainerId)
-                    break;
-            }
-        } while (i != objectEventId);
-    }
-    else
-    {
-        do
-        {
-            trainerId = GetRandomScaledFrontierTrainerId(challengeNum, floor);
-            for (i = 0; i < objectEventId; i++)
-            {
-                if (gSaveBlock2Ptr->frontier.trainerIds[i] == trainerId)
-                    break;
-            }
-        } while (i != objectEventId);
-    }
-
-    return trainerId;
-}
+// removed
 
 void GenerateBattlePyramidFloorLayout(u16 *backupMapData, bool8 setPlayerPosition)
 {

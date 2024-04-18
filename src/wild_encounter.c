@@ -92,6 +92,7 @@ void DisableWildEncounters(bool8 disabled)
 // of the inaccessible water metatiles (so that they can't be selected as a Feebas spot) they
 // use a different metatile that isn't actually surfable because it has MB_NORMAL instead.
 // This function is given the coordinates and section of a fishing spot and returns which number it is.
+/*
 static u16 GetFeebasFishingSpotId(s16 targetX, s16 targetY, u8 section)
 {
     u16 x, y;
@@ -114,29 +115,34 @@ static u16 GetFeebasFishingSpotId(s16 targetX, s16 targetY, u8 section)
     }
     return spotId + 1;
 }
+*/
 
 static bool8 CheckFeebas(void)
 {
-    u8 i;
-    u16 feebasSpots[NUM_FEEBAS_SPOTS];
-    s16 x, y;
-    u8 route119Section = 0;
-    u16 spotId;
+    // u8 i;
+    // u16 feebasSpots[NUM_FEEBAS_SPOTS];
+    // s16 x, y;
+    // u8 route119Section = 0;
+    // u16 spotId;
 
     // removed
     return FALSE;
 }
 
+/*
 static u16 FeebasRandom(void)
 {
     sFeebasRngValue = ISO_RANDOMIZE2(sFeebasRngValue);
     return sFeebasRngValue >> 16;
 }
+*/
 
+/*
 static void FeebasSeedRng(u16 seed)
 {
     sFeebasRngValue = seed;
 }
+*/
 
 // LAND_WILD_COUNT
 static u8 ChooseWildMonIndex_Land(void)

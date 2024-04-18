@@ -26,6 +26,7 @@ static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_Building(u16);
 static void TilesetAnim_Rustboro(u16);
+static void TilesetAnim_Fareward(u16);
 static void TilesetAnim_Dewford(u16);
 static void TilesetAnim_Slateport(u16);
 static void TilesetAnim_Mauville(u16);
@@ -51,6 +52,7 @@ static void QueueAnimTiles_General_LandWaterEdge(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
+static void QueueAnimTiles_Fareward_Fountain(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
@@ -311,6 +313,15 @@ const u16 *const gTilesetAnims_Rustboro_WindyWater[] = {
     gTilesetAnims_Rustboro_WindyWater_Frame5,
     gTilesetAnims_Rustboro_WindyWater_Frame6,
     gTilesetAnims_Rustboro_WindyWater_Frame7
+};
+
+const u16 gTilesetAnims_Fareward_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/fareward/anim/fountain/0.4bpp");
+const u16 gTilesetAnims_Fareward_Fountain_Frame1[] = INCBIN_U16("data/tilesets/secondary/fareward/anim/fountain/1.4bpp");
+const u16 tileset_anims_space12[16] = {};
+
+const u16 *const gTilesetAnims_Fareward_Fountain[] = {
+    gTilesetAnims_Fareward_Fountain_Frame0,
+    gTilesetAnims_Fareward_Fountain_Frame1
 };
 
 const u16 gTilesetAnims_Rustboro_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/fountain/0.4bpp");
@@ -687,6 +698,13 @@ void InitTilesetAnim_Rustboro(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_Rustboro;
 }
 
+void InitTilesetAnim_Fareward(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Fareward;
+}
+
 void InitTilesetAnim_Dewford(void)
 {
     sSecondaryTilesetAnimCounter = 0;
@@ -857,6 +875,14 @@ static void TilesetAnim_Rustboro(u16 timer)
         QueueAnimTiles_Rustboro_WindyWater(timer / 8, 7);
 }
 
+static void TilesetAnim_Fareward(u16 timer)
+{
+    if (timer % 16 == 0)
+    {
+        QueueAnimTiles_Fareward_Fountain(timer / 16);
+    }
+}
+
 static void TilesetAnim_Dewford(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1017,6 +1043,12 @@ static void QueueAnimTiles_Rustboro_Fountain(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Rustboro_Fountain);
     AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_Fountain[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 448)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Fareward_Fountain(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Fareward_Fountain);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Fareward_Fountain[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(683)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_Lavaridge_Lava(u16 timer)

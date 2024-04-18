@@ -834,5 +834,5 @@ const struct Tileset gTileset_Fareward =
     .palettes = gTilesetPalettes_Fareward,
     .metatiles = gMetatiles_Fareward,
     .metatileAttributes = gMetatileAttributes_Fareward,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Fareward,
 };

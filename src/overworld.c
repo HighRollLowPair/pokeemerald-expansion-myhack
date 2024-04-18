@@ -1694,7 +1694,7 @@ static void FieldCB_FadeTryShowMapPopup(void)
 
 void CB2_ContinueSavedGame(void)
 {
-    u8 trainerHillMapId;
+    // u8 trainerHillMapId;
 
     FieldClearVBlankHBlankCallbacks();
     StopMapMusic();
@@ -1704,7 +1704,6 @@ void CB2_ContinueSavedGame(void)
 
     LoadSaveblockMapHeader();
     ClearDiveAndHoleWarps();
-    trainerHillMapId = GetCurrentTrainerHillMapId();
     // removed
     LoadSaveblockObjEventScripts();
 
