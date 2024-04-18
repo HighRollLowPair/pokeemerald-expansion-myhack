@@ -1084,11 +1084,6 @@ static void ReturnToMainRegistryMenu(u8 taskId)
 
 static void GoToSecretBasePCRegisterMenu(u8 taskId)
 {
-    if (VarGet(VAR_CURRENT_SECRET_BASE) == 0)
-        ScriptContext_SetupScript(SecretBase_EventScript_PCCancel);
-    else
-        ScriptContext_SetupScript(SecretBase_EventScript_ShowRegisterMenu);
-
     DestroyTask(taskId);
 }
 

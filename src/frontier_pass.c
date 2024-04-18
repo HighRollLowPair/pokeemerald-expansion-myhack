@@ -1577,11 +1577,7 @@ static void Task_HandleFrontierMap(u8 taskId)
     tState++;
 }
 
-static u8 MapNumToFrontierFacilityId(u16 mapNum) // id + 1, zero means not a frontier map number
-{
-    // removed
-    return 0;
-}
+// removed
 
 static void InitFrontierMapSprites(void)
 {

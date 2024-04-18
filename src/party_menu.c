@@ -456,7 +456,7 @@ static void Task_HandleSwitchItemsFromBagYesNoInput(u8);
 static void Task_ValidateChosenHalfParty(u8);
 static bool8 GetBattleEntryEligibility(struct Pokemon *);
 static bool8 HasPartySlotAlreadyBeenSelected(u8);
-static u8 GetBattleEntryLevelCap(void);
+// static u8 GetBattleEntryLevelCap(void);
 static u8 GetMaxBattleEntries(void);
 static u8 GetMinBattleEntries(void);
 static void Task_ContinueChoosingHalfParty(u8);
@@ -7012,6 +7012,7 @@ static u8 GetMinBattleEntries(void)
     }
 }
 
+/*
 static u8 GetBattleEntryLevelCap(void)
 {
     switch (VarGet(VAR_FRONTIER_FACILITY))
@@ -7026,6 +7027,7 @@ static u8 GetBattleEntryLevelCap(void)
         return FRONTIER_MAX_LEVEL_OPEN;
     }
 }
+*/
 
 static const u8 *GetFacilityCancelString(void)
 {

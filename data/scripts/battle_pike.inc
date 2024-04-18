@@ -18,28 +18,18 @@ BattleFrontier_BattlePikeRoom_OnTransition:
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetDoubleBattleObjPos::
-	setobjectxyperm LOCALID_OBJ_0, 2, 5
-	setobjectxyperm LOCALID_OBJ_1, 6, 5
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetTwoObjectRoomPos::
-	setobjectxyperm LOCALID_OBJ_0, 4, 4
-	setobjectxyperm LOCALID_OBJ_1, 3, 4
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetOneObjectRoomPos::
-	setobjectxyperm LOCALID_OBJ_0, 4, 4
-	setobjectxyperm LOCALID_OBJ_1, 0, 0
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetNPCRoomObjPos::
-	setobjectxyperm LOCALID_OBJ_0, 5, 5
-	setobjectxyperm LOCALID_OBJ_1, 0, 0
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetBrainRoomObjPos::
-	setobjectxyperm LOCALID_OBJ_0, 4, 3
-	setobjectxyperm LOCALID_OBJ_1, 4, 4
 	end
 
 BattleFrontier_BattlePikeRoom_OnWarp:
@@ -107,14 +97,12 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp::
 BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
 	waitstate
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpWildMonRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
 	waitstate
 	end
 
@@ -127,7 +115,6 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_NoTurningBack::
 	setvar VAR_TEMP_3, 0
 	setvar VAR_TEMP_2, 0
 	lockall
-	msgbox BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
 	closemessage
 	end
 
@@ -140,7 +127,6 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_NoTurningBack::
 	setvar VAR_TEMP_3, 0
 	setvar VAR_TEMP_2, 0
 	lockall
-	msgbox BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
 	closemessage
 	end
 
@@ -171,13 +157,11 @@ BattleFrontier_BattlePikeRoom_EventScript_EnableHealing::
 BattleFrontier_BattlePikeRoom_EventScript_WarpToFinalRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
 	return
 
 BattleFrontier_BattlePikeRoom_EventScript_WarpToThreePathRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
 	return
 
 BattleFrontier_BattlePikeRoomWildMons_EventScript_Exit::
@@ -206,7 +190,6 @@ BattleFrontier_BattlePikeRoomWildMons_EventScript_NoTurningBack::
 	setvar VAR_TEMP_3, 0
 	setvar VAR_TEMP_2, 0
 	lockall
-	msgbox BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
 	closemessage
 	end
 
