@@ -246,7 +246,8 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
         return FALSE;
 
     // Don't play interaction sound for certain scripts.
-    if (script != SecretBase_EventScript_DollInteract
+    if (script != PlayerHouse2F_EventScript_PCOn
+     && script != SecretBase_EventScript_DollInteract
      && script != SecretBase_EventScript_CushionInteract
      && script != EventScript_PC)
         PlaySE(SE_SELECT);
@@ -385,7 +386,6 @@ static const u8 *GetInteractedBackgroundEventScript(struct MapPosition *position
 static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 metatileBehavior, u8 direction)
 {
     s8 elevation;
-
     if (MetatileBehavior_IsPlayerFacingTVScreen(metatileBehavior, direction) == TRUE)
         return EventScript_TV;
     if (MetatileBehavior_IsPC(metatileBehavior) == TRUE)
@@ -398,8 +398,10 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_RunningShoesManual;
     if (MetatileBehavior_IsPictureBookShelf(metatileBehavior) == TRUE)
         return EventScript_PictureBookShelf;
+    /*
     if (MetatileBehavior_IsBookShelf(metatileBehavior) == TRUE)
         return EventScript_BookShelf;
+    */
     if (MetatileBehavior_IsPokeCenterBookShelf(metatileBehavior) == TRUE)
         return EventScript_PokemonCenterBookShelf;
     if (MetatileBehavior_IsVase(metatileBehavior) == TRUE)
@@ -412,6 +414,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_Blueprint;
     if (MetatileBehavior_IsQuestionnaire(metatileBehavior) == TRUE)
         return EventScript_Questionnaire;
+    if (MetatileBehavior_IsWindow(metatileBehavior) == TRUE)
+        return EventScript_Window;
 
     elevation = position->elevation;
     if (elevation == MapGridGetElevationAt(position->x, position->y))

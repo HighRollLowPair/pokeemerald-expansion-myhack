@@ -1,0 +1,49 @@
+mapscripts PlayerHouse1F_MapScripts {
+    
+}
+
+script Fareward_PlayerHouse1F_EventScript_ParentsRoom {
+    lockall
+    msgbox(Fareward_PlayersHouse1F_Text_ParentsRoom)
+    releaseall
+}
+
+script Fareward_PlayerHouse1F_EventScript_ArtPiece {
+    lockall
+    msgbox(Fareward_PlayerHouse1F_Text_ArtPiece)
+    releaseall
+}
+
+script Fareward_PlayerHouse1F_EventScript_SmallBookshelf {
+    lockall
+    msgbox(Fareward_PlayerHouse1F_Text_SmallBookshelf)
+    releaseall
+}
+
+script Fareward_PlayerHouse1F_EventScript_Bookshelf {
+    lockall
+    msgbox(Fareward_PlayerHouse1F_Text_Bookshelf)
+    releaseall
+}
+
+text Fareward_PlayersHouse1F_Text_ParentsRoom {
+    "The door to Mom and Dad's room.\n"
+    "I shouldn't go in without asking."
+}
+
+text Fareward_PlayerHouse1F_Text_ArtPiece {
+    "A painting made by a famous artist from\n"
+    "the Kalos region.\p"
+    "I have trouble pronouncing her name."
+}
+
+text Fareward_PlayerHouse1F_Text_SmallBookshelf {
+    "The bookshelf is neat and organized,\n"
+    "just the way Dad likes it."
+}
+
+text Fareward_PlayerHouse1F_Text_Bookshelf {
+    "There's mostly books on rare pokémon\n"
+    "species and battle strategies, with a\l"
+    "few sci-fi and romance novels mixed in."
+}

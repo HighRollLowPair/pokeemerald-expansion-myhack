@@ -375,10 +375,8 @@ gText_PokemonCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
 	.string "POKéMON CENTER$"
 
-gText_MomOrDadMightLikeThisProgram::
-	.string "{STR_VAR_1} might like this program.\n"
-	.string "… … … … … … … … … … … … … … … …\p"
-	.string "Better get going!$"
+gText_NothingInteresting::
+	.string "Nothing interesting airing right now.$"
 
 gText_WhichFloorWouldYouLike::
 	.string "Welcome to LILYCOVE DEPARTMENT STORE.\p"
@@ -546,6 +544,7 @@ EventScript_VsSeekerChargingDone::
 	releaseall
 	end
 
+	.include "data/scripts/misc.inc"
 	.include "data/text/misc.inc"
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
@@ -602,3 +601,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/PlayerHouse2F/scripts.inc"

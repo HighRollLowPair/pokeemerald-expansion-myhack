@@ -10,6 +10,7 @@
 
 // gMapGroup_IndoorFareward
 #define MAP_PLAYER_HOUSE1F (0 | (1 << 8))
+#define MAP_PLAYER_HOUSE2F (1 | (1 << 8))
 
 // gMapGroup_Dungeons
 

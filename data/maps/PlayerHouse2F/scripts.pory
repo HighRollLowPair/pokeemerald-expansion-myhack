@@ -1,0 +1,167 @@
+mapscripts PlayerHouse2F_MapScripts {
+    
+}
+
+script PlayerHouse2F_EventScript_Dresser {
+    lockall
+    msgbox(PlayerHouse2F_Text_Dresser)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_AsterSignature {
+    lockall
+    msgbox(PlayerHouse2F_Text_AsterSignature)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_Box1 {
+    lockall
+    msgbox(PlayerHouse2F_Text_Box1)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_Box2 {
+    lockall
+    msgbox(PlayerHouse2F_Text_Box2)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_GameCube {
+    lockall
+    msgbox(PlayerHouse2F_Text_GameCube)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_Notebook {
+    lockall
+    msgbox(PlayerHouse2F_Text_Notebook)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_PCOn {
+    lockall
+    setvar(VAR_0x8004, PC_LOCATION_RIGHT)
+    special(DoPCTurnOnEffect)
+    playse(SE_PC_ON)
+    msgbox(gText_PlayerHouseBootPC)
+    special(BedroomPC)
+    waitstate
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_PCOff {
+    setvar(VAR_0x8004, PC_LOCATION_RIGHT)
+    playse(SE_PC_OFF)
+    special(DoPCTurnOffEffect)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_CyndaquilDoll {
+    lockall
+    msgbox(PlayerHouse2F_Text_CyndaquilDoll)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_MarillDoll {
+    lockall
+    msgbox(PlayerHouse2F_Text_MarillDoll)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_CheckClock1 {
+    lockall
+    if (flag(FLAG_SET_WALL_CLOCK) == true) {
+        incrementgamestat(GAME_STAT_CHECKED_CLOCK)
+        fadescreen(FADE_TO_BLACK)
+        special(Special_ViewWallClock)
+        waitstate
+        releaseall
+    }
+    else {
+        msgbox(PlayerHouse2F_Text_ClockIsStopped1)
+        goto(PlayerHouse2F_EventScript_StartClock)
+        releaseall
+    }
+}
+
+script PlayerHouse2F_EventScript_CheckClock2 {
+    lockall
+    delay(10)
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerHouse2F_Movement_LookAtClock)
+    waitmovement(0)
+    msgbox(PlayerHouse2F_Text_ClockIsStopped2)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerHouse2F_Movement_MoveToClock)
+    waitmovement(0)
+    goto(PlayerHouse2F_EventScript_StartClock)
+    releaseall
+}
+
+script PlayerHouse2F_EventScript_StartClock {
+    fadescreen(FADE_TO_BLACK)
+    special(StartWallClock)
+    waitstate
+    delay(10)
+    setvar(VAR_FAREWARD_INTRO_STATE, 1)
+    setflag(FLAG_SET_WALL_CLOCK)
+    return
+}
+
+text PlayerHouse2F_Text_Dresser {
+    "No need to change clothes right now."
+}
+
+text PlayerHouse2F_Text_AsterSignature {
+    "A poster with the signature of a\n"
+    "Champion-ranked trainer, Aster.\l"
+    "Mom got him to sign it for me when\l"
+    "I was younger."
+}
+
+text PlayerHouse2F_Text_Box1 {
+    "The box contains various toys, video\n"
+    "games, and other fond memories."
+}
+
+text PlayerHouse2F_Text_Box2 {
+    "I should probably organize all the stuff\n"
+    "in this box at some point."
+}
+
+text PlayerHouse2F_Text_GameCube {
+    "A Nintendo GameCube. There's a copy of\n"
+    "Pokémon XD: Gale of Darkness inside."
+}
+
+text PlayerHouse2F_Text_Notebook {
+    "It's filled with notes from my classes at\n"
+    "Grandelia Trainers' School."
+}
+
+text PlayerHouse2F_Text_CyndaquilDoll {
+    "A cyndaquil doll. How cute!"
+}
+
+text PlayerHouse2F_Text_MarillDoll {
+    "A marill doll. So round!"
+}
+
+text PlayerHouse2F_Text_ClockIsStopped1 {
+    "That's odd. The clock is stopped?\n"
+    "I'd better reset it!"
+}
+
+text PlayerHouse2F_Text_ClockIsStopped2 {
+    "Hold on. The clock is stopped...?\n"
+    "Well, I'd better go reset it!"
+}
+
+movement PlayerHouse2F_Movement_LookAtClock {
+    walk_down
+    face_right
+}
+
+movement PlayerHouse2F_Movement_MoveToClock {
+    walk_right * 2
+    face_up
+}
