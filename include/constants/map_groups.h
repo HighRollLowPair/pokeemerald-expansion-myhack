@@ -9,8 +9,14 @@
 #define MAP_FAREWARD (0 | (0 << 8))
 
 // gMapGroup_IndoorFareward
-#define MAP_PLAYER_HOUSE1F (0 | (1 << 8))
-#define MAP_PLAYER_HOUSE2F (1 | (1 << 8))
+#define MAP_PLAYER_HOUSE1F          (0 | (1 << 8))
+#define MAP_PLAYER_HOUSE2F          (1 | (1 << 8))
+#define MAP_HALEY_HOUSE1F           (2 | (1 << 8))
+#define MAP_HALEY_HOUSE2F           (3 | (1 << 8))
+#define MAP_DAMON_HOUSE1F           (4 | (1 << 8))
+#define MAP_DAMON_HOUSE_DAMONS_ROOM (5 | (1 << 8))
+#define MAP_FAREWARD_HOUSE1         (6 | (1 << 8))
+#define MAP_FAREWARD_HOUSE2         (7 | (1 << 8))
 
 // gMapGroup_Dungeons
 

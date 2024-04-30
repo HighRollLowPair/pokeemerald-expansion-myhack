@@ -1,3 +1,159 @@
 mapscripts Fareward_MapScripts {
-    
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        VAR_FAREWARD_INTRO_STATE, 5 {
+            turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+        }
+    ]
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_FAREWARD_INTRO_STATE, 3: Fareward_EventScript_Damon
+        VAR_FAREWARD_INTRO_STATE, 5: Fareward_EventScript_GetStarter
+    ]
+}
+
+script Fareward_EventScript_Damon {
+    lockall
+    addobject(1)
+    playbgm(MUS_ENCOUNTER_BRENDAN, TRUE)
+    applymovement(1, Fareward_Movement_Damon1)
+    waitmovement(0)
+    msgbox(Fareward_Text_Damon1)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+    waitmovement(0)
+    applymovement(1, Fareward_Movement_Damon2)
+    waitmovement(0)
+    msgbox(Fareward_Text_Damon2)
+    closemessage
+    applymovement(1, Fareward_Movement_Damon3)
+    waitmovement(0)
+    removeobject(1)
+    savebgm(MUS_DUMMY)
+    fadedefaultbgm
+    delay(10)
+    setvar(VAR_FAREWARD_INTRO_STATE, 4)
+    clearflag(FLAG_HIDE_CONVO_IN_PLAYER_HOUSE)
+    setflag(FLAG_HIDE_MOM_AT_CUPBOARD)
+    setflag(FLAG_HIDE_DAD_DEFAULT)
+    releaseall
+}
+
+script Fareward_EventScript_GetStarter {
+    lockall
+    msgbox(Fareward_Text_GetStarter1)
+    closemessage
+    playse(SE_BIKE_HOP)
+    applymovement(5, Common_Movement_JumpInPlace_Up)
+    waitmovement(0)
+    playse(SE_BIKE_HOP)
+    applymovement(5, Common_Movement_JumpInPlace_Up)
+    waitmovement(0)
+    msgbox(Fareward_Text_GetStarter2)
+    closemessage
+    applymovement(4, Common_Movement_FaceLeft)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+    waitmovement(0)
+    msgbox(Fareward_Text_GetStarter3)
+    closemessage
+    applymovement(4, Common_Movement_FaceUp)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    msgbox(Fareward_Text_GetStarter4)
+    closemessage
+    msgbox(Fareward_Text_GetStarter5)
+    closemessage
+    applymovement(5, Fareward_Movement_GetStarter1)
+    waitmovement(0)
+    msgbox(Fareward_Text_GetStarter6)
+    closemessage
+    msgbox(Fareward_Text_GetStarter7)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Fareward_Movement_GetStarter2)
+    waitmovement(0)
+    fadescreen(FADE_TO_BLACK)
+    special(ChooseStarter)
+    releaseall
+}
+
+text Fareward_Text_Damon1 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Damon:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Oh, hey {PLAYER}!"
+}
+
+text Fareward_Text_Damon2 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Damon:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You excited to finally get your\n"
+    "very own pokémon? I know I am!\l"
+    "I wonder what pokémon we'll get to\l"
+    "pick from. I hope there's a swablu!\l"
+    "Well, let me know if you see Professor\l"
+    "Hemlock before I do, ok? I gotta go\l"
+    "take care of some stuff at home right\l"
+    "now, though, so I'll see ya!"
+}
+
+text Fareward_Text_GetStarter1 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Hemlock:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Alright, you three.\n"
+    "Are you ready to choose your first\l"
+    "pokémon?"
+}
+
+text Fareward_Text_GetStarter2 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Damon:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Yes, yes, yes! I'm so ready!"
+}
+
+text Fareward_Text_GetStarter3 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Wow, your friend sure is pumped\n"
+    "up for this, huh?"
+}
+
+text Fareward_Text_GetStarter4 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Hemlock:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I'm glad to see how\n"
+    "much you're looking forward to this,\l"
+    "Damon! However, I did promise Grisha\l"
+    "to give {PLAYER} their own pokémon\l"
+    "quite some time ago, so I'd like them\l"
+    "to choose first if that's alright\l"
+    "with the two of you."
+}
+
+text Fareward_Text_GetStarter5 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Fine with me."
+}
+
+text Fareward_Text_GetStarter6 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Damon:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Oh! Yeah, I guess that's ok."   
+}
+
+text Fareward_Text_GetStarter7 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Hemlock:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Ok then! {PLAYER},\n"
+    "go ahead and choose one of the three\l"
+    "pokémon from my bag."
+}
+
+movement Fareward_Movement_Damon1 {
+    walk_down * 6
+    delay_8
+    face_right
+}
+
+movement Fareward_Movement_Damon2 {
+    walk_right * 4
+}
+
+movement Fareward_Movement_Damon3 {
+    walk_left * 6
+}
+
+movement Fareward_Movement_GetStarter1 {
+    face_right
+    delay_16
+    face_up
+    delay_16
+    face_right
+    delay_16 * 2
+    walk_in_place_fast_up
+}
+
+movement Fareward_Movement_GetStarter2 {
+    walk_up * 2
 }

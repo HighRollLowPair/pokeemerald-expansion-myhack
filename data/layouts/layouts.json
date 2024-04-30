@@ -14,7 +14,7 @@
     {
       "id": "LAYOUT_PLAYER_HOUSE1F",
       "name": "PlayerHouse1F_Layout",
-      "width": 21,
+      "width": 23,
       "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
@@ -24,12 +24,72 @@
     {
       "id": "LAYOUT_PLAYER_HOUSE2F",
       "name": "PlayerHouse2F_Layout",
-      "width": 13,
+      "width": 15,
       "height": 7,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/PlayerHouse2F/border.bin",
       "blockdata_filepath": "data/layouts/PlayerHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_HALEY_HOUSE1F",
+      "name": "HaleyHouse1F_Layout",
+      "width": 20,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/HaleyHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/HaleyHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_HALEY_HOUSE2F",
+      "name": "HaleyHouse2F_Layout",
+      "width": 14,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/HaleyHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/HaleyHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMON_HOUSE1F",
+      "name": "DamonHouse1F_Layout",
+      "width": 25,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DamonHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/DamonHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMON_HOUSE_DAMONS_ROOM",
+      "name": "DamonHouseDamonsRoom_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/DamonHouseDamonsRoom/border.bin",
+      "blockdata_filepath": "data/layouts/DamonHouseDamonsRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_FAREWARD_HOUSE1",
+      "name": "FarewardHouse1_Layout",
+      "width": 25,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/FarewardHouse1/border.bin",
+      "blockdata_filepath": "data/layouts/FarewardHouse1/map.bin"
+    },
+    {
+      "id": "LAYOUT_FAREWARD_HOUSE2",
+      "name": "FarewardHouse2_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/FarewardHouse2/border.bin",
+      "blockdata_filepath": "data/layouts/FarewardHouse2/map.bin"
     }
   ]
 }

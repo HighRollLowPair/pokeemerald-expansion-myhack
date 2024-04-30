@@ -151,99 +151,103 @@ PlayerHouse2F_EventScript_CheckClock2::
 # 91 "data/maps/PlayerHouse2F/scripts.pory"
 	waitmovement 0
 # 92 "data/maps/PlayerHouse2F/scripts.pory"
-	msgbox PlayerHouse2F_Text_ClockIsStopped2
+	delay 48
 # 93 "data/maps/PlayerHouse2F/scripts.pory"
-	closemessage
+	msgbox PlayerHouse2F_Text_ClockIsStopped2
 # 94 "data/maps/PlayerHouse2F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayerHouse2F_Movement_MoveToClock
+	closemessage
 # 95 "data/maps/PlayerHouse2F/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerHouse2F_Movement_MoveToClock
 # 96 "data/maps/PlayerHouse2F/scripts.pory"
-	goto PlayerHouse2F_EventScript_StartClock
+	waitmovement 0
 # 97 "data/maps/PlayerHouse2F/scripts.pory"
+	goto PlayerHouse2F_EventScript_StartClock
+# 98 "data/maps/PlayerHouse2F/scripts.pory"
 	releaseall
 	return
 
 
 PlayerHouse2F_EventScript_StartClock::
-# 101 "data/maps/PlayerHouse2F/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 102 "data/maps/PlayerHouse2F/scripts.pory"
-	special StartWallClock
+	fadescreen FADE_TO_BLACK
 # 103 "data/maps/PlayerHouse2F/scripts.pory"
-	waitstate
+	special StartWallClock
 # 104 "data/maps/PlayerHouse2F/scripts.pory"
-	delay 10
+	waitstate
 # 105 "data/maps/PlayerHouse2F/scripts.pory"
-	setvar VAR_FAREWARD_INTRO_STATE, 1
+	delay 10
 # 106 "data/maps/PlayerHouse2F/scripts.pory"
+	setvar VAR_FAREWARD_INTRO_STATE, 1
+# 107 "data/maps/PlayerHouse2F/scripts.pory"
 	setflag FLAG_SET_WALL_CLOCK
 	return
 
 
-# 159 "data/maps/PlayerHouse2F/scripts.pory"
-PlayerHouse2F_Movement_LookAtClock:
 # 160 "data/maps/PlayerHouse2F/scripts.pory"
-	walk_down
+PlayerHouse2F_Movement_LookAtClock:
 # 161 "data/maps/PlayerHouse2F/scripts.pory"
+	walk_down
+# 162 "data/maps/PlayerHouse2F/scripts.pory"
 	face_right
+# 163 "data/maps/PlayerHouse2F/scripts.pory"
+	emote_question_mark
 	step_end
 
-# 164 "data/maps/PlayerHouse2F/scripts.pory"
-PlayerHouse2F_Movement_MoveToClock:
-# 165 "data/maps/PlayerHouse2F/scripts.pory"
-	walk_right
-# 165 "data/maps/PlayerHouse2F/scripts.pory"
-	walk_right
 # 166 "data/maps/PlayerHouse2F/scripts.pory"
+PlayerHouse2F_Movement_MoveToClock:
+# 167 "data/maps/PlayerHouse2F/scripts.pory"
+	walk_right
+# 167 "data/maps/PlayerHouse2F/scripts.pory"
+	walk_right
+# 168 "data/maps/PlayerHouse2F/scripts.pory"
 	face_up
 	step_end
 
 PlayerHouse2F_Text_Dresser::
-# 110 "data/maps/PlayerHouse2F/scripts.pory"
+# 111 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "No need to change clothes right now.$"
 
 PlayerHouse2F_Text_AsterSignature::
-# 114 "data/maps/PlayerHouse2F/scripts.pory"
+# 115 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "A poster with the signature of a\n"
 	.string "Champion-ranked trainer, Aster.\l"
 	.string "Mom got him to sign it for me when\l"
 	.string "I was younger.$"
 
 PlayerHouse2F_Text_Box1::
-# 121 "data/maps/PlayerHouse2F/scripts.pory"
+# 122 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "The box contains various toys, video\n"
 	.string "games, and other fond memories.$"
 
 PlayerHouse2F_Text_Box2::
-# 126 "data/maps/PlayerHouse2F/scripts.pory"
+# 127 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "I should probably organize all the stuff\n"
-	.string "in this box at some point.$"
+	.string "in these boxes at some point.$"
 
 PlayerHouse2F_Text_GameCube::
-# 131 "data/maps/PlayerHouse2F/scripts.pory"
+# 132 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "A Nintendo GameCube. There's a copy of\n"
 	.string "Pokémon XD: Gale of Darkness inside.$"
 
 PlayerHouse2F_Text_Notebook::
-# 136 "data/maps/PlayerHouse2F/scripts.pory"
+# 137 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "It's filled with notes from my classes at\n"
 	.string "Grandelia Trainers' School.$"
 
 PlayerHouse2F_Text_CyndaquilDoll::
-# 141 "data/maps/PlayerHouse2F/scripts.pory"
+# 142 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "A cyndaquil doll. How cute!$"
 
 PlayerHouse2F_Text_MarillDoll::
-# 145 "data/maps/PlayerHouse2F/scripts.pory"
+# 146 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "A marill doll. So round!$"
 
 PlayerHouse2F_Text_ClockIsStopped1::
-# 149 "data/maps/PlayerHouse2F/scripts.pory"
+# 150 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "That's odd. The clock is stopped?\n"
 	.string "I'd better reset it!$"
 
 PlayerHouse2F_Text_ClockIsStopped2::
-# 154 "data/maps/PlayerHouse2F/scripts.pory"
+# 155 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "Hold on. The clock is stopped...?\n"
 	.string "Well, I'd better go reset it!$"

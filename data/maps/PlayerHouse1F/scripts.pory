@@ -1,5 +1,8 @@
 mapscripts PlayerHouse1F_MapScripts {
-    
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_FAREWARD_INTRO_STATE, 1: Fareward_PlayerHouse1F_EventScript_MomBeckons
+        VAR_FAREWARD_INTRO_STATE, 4: Fareward_PlayerHouse1F_EventScript_HemlockConvo
+    ]
 }
 
 script Fareward_PlayerHouse1F_EventScript_ParentsRoom {
@@ -26,6 +29,59 @@ script Fareward_PlayerHouse1F_EventScript_Bookshelf {
     releaseall
 }
 
+script Fareward_PlayerHouse1F_EventScript_MomBeckons {
+    lockall
+    msgbox(Fareward_PlayerHouse1F_Text_MomBeckons1)
+    closemessage
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Fareward_PlayerHouse1F_Movement_MomBeckons1)
+    waitmovement(0)
+    delay(48)
+    msgbox(Fareward_PlayerHouse1F_Text_MomBeckons2)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Fareward_PlayerHouse1F_Movement_MomBeckons2)
+    waitmovement(0)
+    applymovement(1, Common_Movement_FaceRight)
+    waitmovement(0)
+    msgbox(Fareward_PlayerHouse1F_Text_MomBeckons3)
+    setvar(VAR_FAREWARD_INTRO_STATE, 2)
+    releaseall
+}
+
+script Fareward_PlayerHouse1F_EventScript_HemlockConvo {
+    lockall
+    playse(SE_PIN)
+    applymovement(5, Fareward_PlayerHouse1F_Movement_HemlockConvo)
+    waitmovement(0)
+    applymovement(4, Common_Movement_FaceDown)
+    waitmovement(0)
+    applymovement(3, Common_Movement_FaceDown)
+    waitmovement(0)
+    msgbox(Fareward_PlayerHouse1F_Text_HemlockConvo)
+    setvar(VAR_FAREWARD_INTRO_STATE, 5)
+    clearflag(FLAG_HIDE_CHOOSE_STARTER)
+    warp(MAP_FAREWARD, 13, 16)
+    waitstate
+    releaseall
+}
+
+script Fareward_PlayerHouse1F_EventScript_MomSeeNeighbors {
+    lockall
+    msgbox(Fareward_PlayerHouse1F_Text_MomSeeNeighbors, MSGBOX_NPC)
+    releaseall
+}
+
+script Fareward_PlayerHouse1F_EventScript_Dad {
+    lockall
+    if (var(VAR_FAREWARD_INTRO_STATE) == 2) {
+        msgbox(Fareward_PlayerHouse1F_Text_Dad1, MSGBOX_NPC)
+    }
+    else {
+        msgbox(Fareward_PlayerHouse1F_Text_Dad2, MSGBOX_NPC)
+    }
+    releaseall
+}
+
 text Fareward_PlayersHouse1F_Text_ParentsRoom {
     "The door to Mom and Dad's room.\n"
     "I shouldn't go in without asking."
@@ -46,4 +102,79 @@ text Fareward_PlayerHouse1F_Text_Bookshelf {
     "There's mostly books on rare pokémon\n"
     "species and battle strategies, with a\l"
     "few sci-fi and romance novels mixed in."
+}
+
+text Fareward_PlayerHouse1F_Text_MomBeckons1 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} {PLAYER}!"
+}
+
+text Fareward_PlayerHouse1F_Text_MomBeckons2 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Could you come here? I've got some\n"
+    "exciting news to share!"
+}
+
+text Fareward_PlayerHouse1F_Text_MomBeckons3 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hi, sweetie. Are you feeling ready\n"
+    "for the big day today? You must be\l"
+    "so excited to receive your first\l"
+    "pokémon!\p"
+    "When I got my first partner pokémon,\n"
+    "I was so excited I could hardly\l"
+    "sleep the night before! Ah, that was\l"
+    "quite some time ago now...\p"
+    "Oh, right, the news. We have some new\n"
+    "neighbors moving in today! They're a\l"
+    "couple with a daughter named Haley\l"
+    "who's about the same age as you.\p"
+    "They're moving into the house at\n"
+    "the east end of the street.\l"
+    "You should stop by and say hello!"
+}
+
+text Fareward_PlayerHouse1F_Text_HemlockConvo {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Hemlock:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Ah, hello there {PLAYER}!\n"
+    "It's good to see you again! I arrived\l"
+    "just a few minutes ago. Your mother\l"
+    "Grisha tells me that David Jarrett and\l"
+    "his family have just begun moving in.\l"
+    "That's great to hear; I'm looking\l"
+    "forward to working with him.\p"
+    "Anyway! Why don't we go see if your\n"
+    "friends are ready to choose their first\l"
+    "pokémon!"
+}
+
+text Fareward_PlayerHouse1F_Text_MomSeeNeighbors {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Have you met the new neighbors\n"
+    "yet? They're moving into the house at\l"
+    "the east end of the street."
+}
+
+text Fareward_PlayerHouse1F_Text_Dad1 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Dad:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hey, kiddo! How've you and Damon\n"
+    "been getting along? Tell his dad I'd\l"
+    "love to go have drinks with him\l"
+    "sometime soon, alright?"
+}
+
+text Fareward_PlayerHouse1F_Text_Dad2 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Dad:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hey, kiddo! I hope you're having\n"
+    "plenty of amazing experiences on your\l"
+    "journey out there."
+}
+
+movement Fareward_PlayerHouse1F_Movement_MomBeckons1 {
+    face_right
+    emote_exclamation_mark
+}
+
+movement Fareward_PlayerHouse1F_Movement_MomBeckons2 {
+    walk_right * 13
+    walk_up * 7
+    face_left
+}
+
+movement Fareward_PlayerHouse1F_Movement_HemlockConvo {
+    face_down
+    emote_exclamation_mark
 }

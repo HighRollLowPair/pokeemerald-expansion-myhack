@@ -89,6 +89,7 @@ script PlayerHouse2F_EventScript_CheckClock2 {
     delay(10)
     applymovement(OBJ_EVENT_ID_PLAYER, PlayerHouse2F_Movement_LookAtClock)
     waitmovement(0)
+    delay(48)
     msgbox(PlayerHouse2F_Text_ClockIsStopped2)
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, PlayerHouse2F_Movement_MoveToClock)
@@ -125,7 +126,7 @@ text PlayerHouse2F_Text_Box1 {
 
 text PlayerHouse2F_Text_Box2 {
     "I should probably organize all the stuff\n"
-    "in this box at some point."
+    "in these boxes at some point."
 }
 
 text PlayerHouse2F_Text_GameCube {
@@ -159,6 +160,7 @@ text PlayerHouse2F_Text_ClockIsStopped2 {
 movement PlayerHouse2F_Movement_LookAtClock {
     walk_down
     face_right
+    emote_question_mark
 }
 
 movement PlayerHouse2F_Movement_MoveToClock {

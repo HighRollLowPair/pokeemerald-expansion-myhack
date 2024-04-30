@@ -603,3 +603,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/PlayerHouse2F/scripts.inc"
+
+	.include "data/maps/HaleyHouse1F/scripts.inc"
+
+	.include "data/maps/HaleyHouse2F/scripts.inc"
+
+	.include "data/maps/DamonHouse1F/scripts.inc"
+
+	.include "data/maps/DamonHouseDamonsRoom/scripts.inc"
+
+	.include "data/maps/FarewardHouse1/scripts.inc"
+
+	.include "data/maps/FarewardHouse2/scripts.inc"

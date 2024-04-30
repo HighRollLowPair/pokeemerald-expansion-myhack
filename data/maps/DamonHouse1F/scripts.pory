@@ -1,0 +1,53 @@
+mapscripts DamonHouse1F_MapScripts {
+    
+}
+
+script DamonHouse1F_EventScript_Painting {
+    lockall
+    msgbox(DamonHouse1F_Text_Painting)
+    releaseall
+}
+
+script DamonHouse1F_EventScript_Basement {
+    lockall
+    msgbox(DamonHouse1F_Text_Basement)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, DamonHouse1F_Movement_Basement)
+    waitmovement(0)
+    releaseall
+}
+
+script DamonHouse1F_EventScript_SistersRoom {
+    lockall
+    msgbox(DamonHouse1F_Text_SistersRoom)
+    releaseall
+}
+
+script DamonHouse1F_EventScript_ParentsRoom {
+    lockall
+    msgbox(DamonHouse1F_Text_ParentsRoom)
+    releaseall
+}
+
+text DamonHouse1F_Text_Painting {
+    "What a beautiful landscape painting!"
+}
+
+text DamonHouse1F_Text_Basement {
+    "I shouldn't go into the basement without\n"
+    "Damon's parent's permission."
+}
+
+text DamonHouse1F_Text_SistersRoom {
+    "Keesha's room. I shouldn't go in without\n"
+    "asking first."
+}
+
+text DamonHouse1F_Text_ParentsRoom {
+    "Damon's parent's room. I should ask\n"
+    "permission before going in."
+}
+
+movement DamonHouse1F_Movement_Basement {
+    walk_down
+}

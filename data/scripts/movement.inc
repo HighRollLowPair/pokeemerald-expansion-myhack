@@ -6,6 +6,10 @@ Common_Movement_ExclamationMark:
 	emote_exclamation_mark
 	step_end
 
+Common_Movement_JumpInPlace_Up:
+	jump_in_place_up
+	step_end
+
 Common_Movement_Delay48:
 	delay_16
 	delay_16

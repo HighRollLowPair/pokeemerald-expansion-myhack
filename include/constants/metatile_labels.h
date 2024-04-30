@@ -245,6 +245,7 @@
 #define METATILE_General_YellowCaveOpen        0x1A9
 
 // gTileset_GenericBuilding
+#define METATILE_GenericBuilding_Door                    0x295
 #define METATILE_GenericBuilding_TableEdge               0x2F1
 #define METATILE_GenericBuilding_TrickHouse_Door_Closed  0x21B
 #define METATILE_GenericBuilding_TrickHouse_Stairs_Down  0x219
@@ -390,6 +391,7 @@
 
 // gTileset_Petalburg
 #define METATILE_Petalburg_Door_BirchsLab   0x249
+#define METATILE_Petalburg_Door_Fareward    0x2B0
 #define METATILE_Petalburg_Door_Littleroot  0x248
 #define METATILE_Petalburg_Door_Oldale      0x287
 

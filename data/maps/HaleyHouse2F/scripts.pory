@@ -1,0 +1,66 @@
+mapscripts HaleyHouse2F_MapScripts {
+
+}
+
+script HaleyHouse2F_EventScript_Clock {
+    lockall
+    incrementgamestat(GAME_STAT_CHECKED_CLOCK)
+    fadescreen(FADE_TO_BLACK)
+    special(Special_ViewWallClock)
+    waitstate
+    releaseall
+}
+
+script HaleyHouse2F_EventScript_GameCube {
+    lockall
+    msgbox(HaleyHouse2F_Text_GameCube)
+    releaseall
+}
+
+script HaleyHouse2F_EventScript_Box {
+    lockall
+    msgbox(HaleyHouse2F_Text_Box)
+    releaseall
+}
+
+script HaleyHouse2F_EventScript_Notebook {
+    lockall
+    msgbox(HaleyHouse2F_Text_Notebook)
+    releaseall
+}
+
+script HaleyHouse2F_EventScript_PC {
+    lockall
+    msgbox(HaleyHouse2F_Text_PC)
+    releaseall
+}
+
+script HaleyHouse2F_EventScript_Haley {
+    lockall
+    msgbox(HaleyHouse2F_Text_Haley)
+    releaseall
+}
+
+text HaleyHouse2F_Text_GameCube {
+    "A Nintendo GameCube. This one is orange!"
+}
+
+text HaleyHouse2F_Text_Box {
+    "Various books and magazines can be\n"
+    "seen through the open top."
+}
+
+text HaleyHouse2F_Text_Notebook{
+    "The cover says 'My Diary.' I probably\n"
+    "shouldn't look through it."
+}
+
+text HaleyHouse2F_Text_PC {
+    "I shouldn't use Haley's computer\n"
+    "without her permission."
+}
+
+text HaleyHouse2F_Text_Haley {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Now where did I put those\n"
+    "repels...?"
+}

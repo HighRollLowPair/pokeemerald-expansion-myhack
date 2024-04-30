@@ -260,8 +260,8 @@ static const u8 sPlayerAvatarGfxIds[][2] =
 
 static const u8 sFRLGAvatarGfxIds[GENDER_COUNT] =
 {
-    [MALE]   = OBJ_EVENT_GFX_RED,
-    [FEMALE] = OBJ_EVENT_GFX_LEAF
+    [MALE]   = OBJ_EVENT_GFX_DAMON,
+    [FEMALE] = OBJ_EVENT_GFX_HALEY
 };
 
 static const u8 sRSAvatarGfxIds[GENDER_COUNT] =
@@ -636,7 +636,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         return;
     }
 
-    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
+    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) /*&& FlagGet(FLAG_SYS_B_DASH)*/
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
     {
         PlayerRun(direction);

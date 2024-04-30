@@ -1,0 +1,187 @@
+mapscripts HaleyHouse1F_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_FAREWARD_INTRO_STATE, 2: HaleyHouse1F_EventScript_MomIntroduction
+    ]
+}
+
+script HaleyHouse1F_EventScript_Cabinet {
+    lockall
+    msgbox(HaleyHouse1F_Text_Cabinet)
+    releaseall
+}
+
+script HaleyHouse1F_EventScript_ParentsRoom {
+    lockall
+    msgbox(HaleyHouse1F_Text_ParentsRoom)
+    releaseall
+}
+
+script HaleyHouse1F_EventScript_Clock {
+    lockall
+    incrementgamestat(GAME_STAT_CHECKED_CLOCK)
+    fadescreen(FADE_TO_BLACK)
+    special(Special_ViewWallClock)
+    waitstate
+    releaseall
+}
+
+script HaleyHouse1F_EventScript_MomIntroduction {
+    lockall
+    addobject(3)
+    playse(SE_PIN)
+    applymovement(1, HaleyHouse1F_Movement_MomIntroduction1)
+    waitmovement(0)
+    msgbox(HaleyHouse1F_Text_MomIntroduction1)
+    closemessage
+    applymovement(1, Common_Movement_FaceLeft)
+    waitmovement(0)
+    msgbox(HaleyHouse1F_Text_MomIntroduction2)
+    closemessage
+    delay(10)
+    playse(SE_EXIT)
+    delay(80)
+    playbgm(MUS_ENCOUNTER_MAY, TRUE)
+    applymovement(3, HaleyHouse1F_Movement_MomIntroduction2)
+    waitmovement(0)
+    applymovement(1, Common_Movement_FaceDown)
+    waitmovement(0)
+    msgbox(HaleyHouse1F_Text_MomIntroduction3)
+    closemessage
+    applymovement(1, Common_Movement_FaceLeft)
+    waitmovement(0)
+    applymovement(3, HaleyHouse1F_Movement_MomIntroduction3)
+    waitmovement(0)
+    removeobject(3)
+    savebgm(MUS_DUMMY)
+    fadedefaultbgm
+    applymovement(1, Common_Movement_FaceDown)
+    waitmovement(0)
+    msgbox(HaleyHouse1F_Text_MomIntroduction4)
+    closemessage
+    applymovement(1, HaleyHouse1F_Movement_MomIntroduction4)
+    waitmovement(0)
+    setvar(VAR_FAREWARD_INTRO_STATE, 3)
+    releaseall
+}
+
+script HaleyHouse1F_EventScript_Mom1 {
+    lockall
+    msgbox(HaleyHouse1F_Text_Mom1, MSGBOX_NPC)
+    releaseall
+}
+
+script HaleyHouse1F_EventScript_Mom2 {
+    lockall
+    msgbox(HaleyHouse1F_Text_Mom2, MSGBOX_NPC)
+    releaseall
+}
+
+script HaleyHouse1F_EventScript_Dad {
+    lockall
+    msgbox(HaleyHouse1F_Text_Dad, MSGBOX_NPC)
+    releaseall
+}
+
+text HaleyHouse1F_Text_Cabinet {
+    "The cabinet is filled with numerous\n"
+    "pokémon-related academic reports, all\l"
+    "neatly filed in alphabetical order."
+}
+
+text HaleyHouse1F_Text_ParentsRoom {
+    "I probably shouldn't go into Haley's\n"
+    "parent's room without permission."
+}
+
+text HaleyHouse1F_Text_MomIntroduction1 {
+    "You must be {PLAYER} from down the\n"
+    "street. My name is Margot. It's lovely\l"
+    "to meet you!\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Your mother and father came by\n"
+    "earlier to introduce themselves.\l"
+    "I'm sure they've already told you about\l"
+    "our daughter Haley. She's upstairs\l"
+    "unpacking her belongings."
+}
+
+text HaleyHouse1F_Text_MomIntroduction2 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Haley! Could you come down here\n"
+    "and introduce yourself, please?"
+}
+
+text HaleyHouse1F_Text_MomIntroduction3 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You're {PLAYER}, right?\n"
+    "Nice to meet you! Your mom said\l"
+    "Professor Hemlock is visiting today\l"
+    "to give you and your friend your first\l"
+    "pokémon. We moved to the Xemek region\l"
+    "because my dad got a job working for\l"
+    "the professor, so I'll be getting a\l"
+    "partner pokémon from him too.\p"
+    "I'm not very interested in becoming\n"
+    "a great pokémon master or anything,\l"
+    "but at least I'll have something to\l"
+    "keep me company in this new region.\p"
+    "So I guess I'll see you when we get\n"
+    "our pokémon later. For now, I'm\l"
+    "gonna go finish unpacking my things.\l"
+    "See you around!"
+}
+
+text HaleyHouse1F_Text_MomIntroduction4 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Oh, how exciting it must be to\n"
+    "receive your very own pokémon!\l"
+    "I do hope you and Haley can become\l"
+    "close friends over the course of your\l"
+    "journeys. It's been wonderful to meet\l"
+    "you, {PLAYER}. Tell your parents that\l"
+    "we'd love to have them over for dinner\l"
+    "sometime."
+}
+
+text HaleyHouse1F_Text_Mom1 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I know Haley doesn't seem\n"
+    "very enthusiastic about receiving her\l"
+    "first pokémon, but I'm sure that deep\l"
+    "down, she's actually looking forward\l"
+    "to it."
+}
+
+text HaleyHouse1F_Text_Mom2 {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hello there, {PLAYER}! I hope\n"
+    "you and Haley are getting along well."
+}
+
+text HaleyHouse1F_Text_Dad {
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}David:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} It's good to meet you, {PLAYER}.\n"
+    "My name is David. As you heard from my\l"
+    "daughter, we've moved to Xemek for my\l"
+    "new job working as a research assistant\l"
+    "for Professor Hemlock. I look forward\l"
+    "to seeing the progress you and Haley\l"
+    "make on your pokémon journeys."
+}
+
+movement HaleyHouse1F_Movement_MomIntroduction1 {
+    face_down
+    emote_exclamation_mark
+    delay_16 * 3
+    walk_down
+    walk_left * 3
+    face_down
+}
+
+movement HaleyHouse1F_Movement_MomIntroduction2 {
+    walk_right * 7
+    face_down
+}
+
+movement HaleyHouse1F_Movement_MomIntroduction3 {
+    walk_left * 7
+}
+
+movement HaleyHouse1F_Movement_MomIntroduction4 {
+    walk_right * 3
+    walk_up
+    face_right
+}

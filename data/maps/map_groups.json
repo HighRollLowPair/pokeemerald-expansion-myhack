@@ -9,7 +9,13 @@
   ],
   "gMapGroup_IndoorFareward": [
     "PlayerHouse1F",
-    "PlayerHouse2F"
+    "PlayerHouse2F",
+    "HaleyHouse1F",
+    "HaleyHouse2F",
+    "DamonHouse1F",
+    "DamonHouseDamonsRoom",
+    "FarewardHouse1",
+    "FarewardHouse2"
   ],
   "gMapGroup_Dungeons": [
 

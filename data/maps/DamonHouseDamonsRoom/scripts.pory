@@ -1,0 +1,47 @@
+mapscripts DamonHouseDamonsRoom_MapScripts {
+    
+}
+
+script DamonHouseDamonsRoom_EventScript_SwabluDoll {
+    lockall
+    msgbox(DamonHouseDamonsRoom_Text_SwabluDoll)
+    releaseall
+}
+
+script DamonHouseDamonsRoom_EventScript_GameCube {
+    lockall
+    msgbox(DamonHouseDamonsRoom_Text_GameCube)
+    releaseall
+}
+
+script DamonHouseDamonsRoom_EventScript_PC {
+    lockall
+    msgbox(DamonHouseDamonsRoom_Text_PC)
+    releaseall
+}
+
+script DamonHouseDamonsRoom_EventScript_Drawer {
+    lockall
+    msgbox(DamonHouseDamonsRoom_Text_Drawer)
+    releaseall
+}
+
+text DamonHouseDamonsRoom_Text_SwabluDoll {
+    "A swablu doll. Swablu always was one of\n"
+    "Damon's favorites."
+}
+
+text DamonHouseDamonsRoom_Text_GameCube {
+    "A Nintendo GameCube. I have lots of fond\n"
+    "memories playing together with Damon."
+}
+
+text DamonHouseDamonsRoom_Text_PC {
+    "Damon probably wouldn't mind me using\n"
+    "his PC, but I don't know his password."
+}
+
+text DamonHouseDamonsRoom_Text_Drawer {
+    "There sure are lots of pokémon-related\n"
+    "comic books in here!"
+}
