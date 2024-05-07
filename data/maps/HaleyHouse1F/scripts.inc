@@ -151,79 +151,79 @@ HaleyHouse1F_EventScript_Dad::
 	return
 
 
-# 165 "data/maps/HaleyHouse1F/scripts.pory"
+# 168 "data/maps/HaleyHouse1F/scripts.pory"
 HaleyHouse1F_Movement_MomIntroduction1:
-# 166 "data/maps/HaleyHouse1F/scripts.pory"
-	face_down
-# 167 "data/maps/HaleyHouse1F/scripts.pory"
-	emote_exclamation_mark
-# 168 "data/maps/HaleyHouse1F/scripts.pory"
-	delay_16
-# 168 "data/maps/HaleyHouse1F/scripts.pory"
-	delay_16
-# 168 "data/maps/HaleyHouse1F/scripts.pory"
-	delay_16
 # 169 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_down
+	face_down
 # 170 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_left
-# 170 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_left
-# 170 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_left
+	emote_exclamation_mark
 # 171 "data/maps/HaleyHouse1F/scripts.pory"
-	face_down
-	step_end
-
+	delay_16
+# 171 "data/maps/HaleyHouse1F/scripts.pory"
+	delay_16
+# 171 "data/maps/HaleyHouse1F/scripts.pory"
+	delay_16
+# 172 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_down
+# 173 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_left
+# 173 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_left
+# 173 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_left
 # 174 "data/maps/HaleyHouse1F/scripts.pory"
-HaleyHouse1F_Movement_MomIntroduction2:
-# 175 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 175 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 175 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 175 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 175 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 175 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 175 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 176 "data/maps/HaleyHouse1F/scripts.pory"
 	face_down
 	step_end
 
+# 177 "data/maps/HaleyHouse1F/scripts.pory"
+HaleyHouse1F_Movement_MomIntroduction2:
+# 178 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 178 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 178 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 178 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 178 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 178 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 178 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
 # 179 "data/maps/HaleyHouse1F/scripts.pory"
+	face_down
+	step_end
+
+# 182 "data/maps/HaleyHouse1F/scripts.pory"
 HaleyHouse1F_Movement_MomIntroduction3:
-# 180 "data/maps/HaleyHouse1F/scripts.pory"
+# 183 "data/maps/HaleyHouse1F/scripts.pory"
 	walk_left
-# 180 "data/maps/HaleyHouse1F/scripts.pory"
+# 183 "data/maps/HaleyHouse1F/scripts.pory"
 	walk_left
-# 180 "data/maps/HaleyHouse1F/scripts.pory"
+# 183 "data/maps/HaleyHouse1F/scripts.pory"
 	walk_left
-# 180 "data/maps/HaleyHouse1F/scripts.pory"
+# 183 "data/maps/HaleyHouse1F/scripts.pory"
 	walk_left
-# 180 "data/maps/HaleyHouse1F/scripts.pory"
+# 183 "data/maps/HaleyHouse1F/scripts.pory"
 	walk_left
-# 180 "data/maps/HaleyHouse1F/scripts.pory"
+# 183 "data/maps/HaleyHouse1F/scripts.pory"
 	walk_left
-# 180 "data/maps/HaleyHouse1F/scripts.pory"
+# 183 "data/maps/HaleyHouse1F/scripts.pory"
 	walk_left
 	step_end
 
-# 183 "data/maps/HaleyHouse1F/scripts.pory"
-HaleyHouse1F_Movement_MomIntroduction4:
-# 184 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 184 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 184 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_right
-# 185 "data/maps/HaleyHouse1F/scripts.pory"
-	walk_up
 # 186 "data/maps/HaleyHouse1F/scripts.pory"
+HaleyHouse1F_Movement_MomIntroduction4:
+# 187 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 187 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 187 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_right
+# 188 "data/maps/HaleyHouse1F/scripts.pory"
+	walk_up
+# 189 "data/maps/HaleyHouse1F/scripts.pory"
 	face_right
 	step_end
 
@@ -295,10 +295,13 @@ HaleyHouse1F_Text_Mom1::
 HaleyHouse1F_Text_Mom2::
 # 150 "data/maps/HaleyHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hello there, {PLAYER}! I hope\n"
-	.string "you and Haley are getting along well.$"
+	.string "you and Haley are getting along well.\p"
+	.string "Where's David? He's at Professor\n"
+	.string "Hemlock's lab in Grandelia. I'm sure\l"
+	.string "he's doing lots of great work there!$"
 
 HaleyHouse1F_Text_Dad::
-# 155 "data/maps/HaleyHouse1F/scripts.pory"
+# 158 "data/maps/HaleyHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}David:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} It's good to meet you, {PLAYER}.\n"
 	.string "My name is David. As you heard from my\l"
 	.string "daughter, we've moved to Xemek for my\l"

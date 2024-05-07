@@ -546,6 +546,7 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/scripts/misc.inc"
 	.include "data/text/misc.inc"
+	.include "data/scripts/rival_battles.inc"
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
 	.include "data/scripts/abnormal_weather.inc"

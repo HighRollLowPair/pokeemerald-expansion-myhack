@@ -15,3 +15,7 @@ EventScript_Locked::
 
 gText_Locked::
 	.string "It's locked.$"
+
+
+gText_GiveNicknameToMon::
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Should I give my {STR_VAR_1} a nickname?$"

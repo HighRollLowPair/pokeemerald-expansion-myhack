@@ -53,13 +53,15 @@ script Fareward_PlayerHouse1F_EventScript_HemlockConvo {
     playse(SE_PIN)
     applymovement(5, Fareward_PlayerHouse1F_Movement_HemlockConvo)
     waitmovement(0)
+    delay(4)
     applymovement(4, Common_Movement_FaceDown)
-    waitmovement(0)
     applymovement(3, Common_Movement_FaceDown)
-    waitmovement(0)
+    waitmovement(4)
+    waitmovement(3)
     msgbox(Fareward_PlayerHouse1F_Text_HemlockConvo)
     setvar(VAR_FAREWARD_INTRO_STATE, 5)
     clearflag(FLAG_HIDE_CHOOSE_STARTER)
+    clearflag(FLAG_HIDE_HEMLOCKS_BAG)
     warp(MAP_FAREWARD, 13, 16)
     waitstate
     releaseall
@@ -140,8 +142,8 @@ text Fareward_PlayerHouse1F_Text_HemlockConvo {
     "That's great to hear; I'm looking\l"
     "forward to working with him.\p"
     "Anyway! Why don't we go see if your\n"
-    "friends are ready to choose their first\l"
-    "pokémon!"
+    "friends are ready to choose their\l"
+    "first pokémon!"
 }
 
 text Fareward_PlayerHouse1F_Text_MomSeeNeighbors {

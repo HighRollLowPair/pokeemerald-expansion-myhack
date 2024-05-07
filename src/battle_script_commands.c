@@ -4233,6 +4233,8 @@ static bool32 BattleTypeAllowsExp(void)
               | BATTLE_TYPE_BATTLE_TOWER
               | BATTLE_TYPE_EREADER_TRAINER))
         return FALSE;
+    else if (FlagGet(FLAG_DONT_GAIN_EXP) == TRUE)
+        return FALSE;
     else
         return TRUE;
 }
@@ -7556,8 +7558,8 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
             moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
-        else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * trainerMoney;
+        //else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+            //moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * trainerMoney;
         else
             moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
     }

@@ -1,0 +1,40 @@
+text gText_NotEnoughMons {
+    "Somehow, you don't have enough pokémon!"
+}
+
+script Fareward_EventScript_DamonBattle {
+	switch(var(VAR_STARTER_MON)) {
+		case SPECIES_TURTWIG:
+			switch(var(VAR_SECOND_STARTER_MON)) {
+				case SPECIES_WATTREL:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_TURTWIG_WATTREL, Fareward_Text_DamonDefeated)
+				case SPECIES_CROAGUNK:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_TURTWIG_CROAGUNK, Fareward_Text_DamonDefeated)
+				case SPECIES_ROCKRUFF:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_TURTWIG_ROCKRUFF, Fareward_Text_DamonDefeated)
+			}
+		case SPECIES_CYNDAQUIL:
+			switch(var(VAR_SECOND_STARTER_MON)) {
+				case SPECIES_WATTREL:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_CYNDAQIL_WATTREL, Fareward_Text_DamonDefeated)
+				case SPECIES_CROAGUNK:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_CYNDAQIL_CROAGUNK, Fareward_Text_DamonDefeated)
+				case SPECIES_ROCKRUFF:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_CYNDAQIL_ROCKRUFF, Fareward_Text_DamonDefeated)
+			}
+		case SPECIES_POPPLIO:
+			switch(var(VAR_SECOND_STARTER_MON)) {
+				case SPECIES_WATTREL:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_POPPLIO_WATTREL, Fareward_Text_DamonDefeated)
+				case SPECIES_CROAGUNK:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_POPPLIO_CROAGUNK, Fareward_Text_DamonDefeated)
+				case SPECIES_ROCKRUFF:
+					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_POPPLIO_ROCKRUFF, Fareward_Text_DamonDefeated)
+			}
+	}
+    return
+}
+
+text Fareward_Text_DamonDefeated {
+    "Dang, I lost! Nice work, {PLAYER}!"
+}

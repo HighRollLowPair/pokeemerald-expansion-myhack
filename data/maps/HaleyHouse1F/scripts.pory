@@ -149,7 +149,10 @@ text HaleyHouse1F_Text_Mom1 {
 
 text HaleyHouse1F_Text_Mom2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hello there, {PLAYER}! I hope\n"
-    "you and Haley are getting along well."
+    "you and Haley are getting along well.\p"
+    "Where's David? He's at Professor\n"
+    "Hemlock's lab in Grandelia. I'm sure\l"
+    "he's doing lots of great work there!"
 }
 
 text HaleyHouse1F_Text_Dad {

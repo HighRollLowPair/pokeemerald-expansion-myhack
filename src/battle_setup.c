@@ -889,13 +889,18 @@ static void CB2_GiveStarter(void)
 {
     u16 starterMon;
 
-    *GetVarPointer(VAR_STARTER_MON) = gSpecialVar_Result;
+    if (FlagGet(FLAG_CHOSEN_FIRST_BUT_NOT_SECOND) == FALSE)
+        *GetVarPointer(VAR_STARTER_MON) = GetStarterPokemon(gSpecialVar_Result);
+    else
+        *GetVarPointer(VAR_SECOND_STARTER_MON) = GetStarterPokemon(gSpecialVar_Result);
     starterMon = GetStarterPokemon(gSpecialVar_Result);
     ScriptGiveMon(starterMon, 5, ITEM_NONE);
+    FlagToggle(FLAG_CHOSEN_FIRST_BUT_NOT_SECOND);
     ResetTasks();
-    PlayBattleBGM();
-    SetMainCallback2(CB2_StartFirstBattle);
-    BattleTransition_Start(B_TRANSITION_BLUR);
+    //PlayBattleBGM();
+    //SetMainCallback2(CB2_StartFirstBattle);
+    //BattleTransition_Start(B_TRANSITION_BLUR);
+    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
 
 static void CB2_StartFirstBattle(void)
@@ -1507,6 +1512,9 @@ void PlayTrainerEncounterMusic(void)
             break;
         case TRAINER_ENCOUNTER_MUSIC_RICH:
             music = MUS_ENCOUNTER_RICH;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_DAMON:
+            music = MUS_ENCOUNTER_BRENDAN;
             break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;

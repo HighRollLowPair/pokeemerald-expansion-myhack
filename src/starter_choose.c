@@ -117,6 +117,13 @@ static const u16 sStarterMon[STARTER_MON_COUNT] =
     SPECIES_POPPLIO,
 };
 
+static const u16 sStarterMon2[STARTER_MON_COUNT] =
+{
+    SPECIES_WATTREL,
+    SPECIES_CROAGUNK,
+    SPECIES_ROCKRUFF
+};
+
 static const struct BgTemplate sBgTemplates[3] =
 {
     {
@@ -352,7 +359,10 @@ u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    return sStarterMon[chosenStarterId];
+    if (FlagGet(FLAG_CHOSEN_FIRST_BUT_NOT_SECOND) == FALSE)
+        return sStarterMon[chosenStarterId];
+    else
+        return sStarterMon2[chosenStarterId];
 }
 
 static void VblankCB_StarterChoose(void)

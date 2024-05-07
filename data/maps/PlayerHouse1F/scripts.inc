@@ -97,152 +97,156 @@ Fareward_PlayerHouse1F_EventScript_HemlockConvo::
 # 55 "data/maps/PlayerHouse1F/scripts.pory"
 	waitmovement 0
 # 56 "data/maps/PlayerHouse1F/scripts.pory"
-	applymovement 4, Common_Movement_FaceDown
+	delay 4
 # 57 "data/maps/PlayerHouse1F/scripts.pory"
-	waitmovement 0
+	applymovement 4, Common_Movement_FaceDown
 # 58 "data/maps/PlayerHouse1F/scripts.pory"
 	applymovement 3, Common_Movement_FaceDown
 # 59 "data/maps/PlayerHouse1F/scripts.pory"
-	waitmovement 0
+	waitmovement 4
 # 60 "data/maps/PlayerHouse1F/scripts.pory"
-	msgbox Fareward_PlayerHouse1F_Text_HemlockConvo
+	waitmovement 3
 # 61 "data/maps/PlayerHouse1F/scripts.pory"
-	setvar VAR_FAREWARD_INTRO_STATE, 5
+	msgbox Fareward_PlayerHouse1F_Text_HemlockConvo
 # 62 "data/maps/PlayerHouse1F/scripts.pory"
-	clearflag FLAG_HIDE_CHOOSE_STARTER
+	setvar VAR_FAREWARD_INTRO_STATE, 5
 # 63 "data/maps/PlayerHouse1F/scripts.pory"
-	warp MAP_FAREWARD, 13, 16
+	clearflag FLAG_HIDE_CHOOSE_STARTER
 # 64 "data/maps/PlayerHouse1F/scripts.pory"
-	waitstate
+	clearflag FLAG_HIDE_HEMLOCKS_BAG
 # 65 "data/maps/PlayerHouse1F/scripts.pory"
+	warp MAP_FAREWARD, 13, 16
+# 66 "data/maps/PlayerHouse1F/scripts.pory"
+	waitstate
+# 67 "data/maps/PlayerHouse1F/scripts.pory"
 	releaseall
 	return
 
 
 Fareward_PlayerHouse1F_EventScript_MomSeeNeighbors::
-# 69 "data/maps/PlayerHouse1F/scripts.pory"
-	lockall
-# 70 "data/maps/PlayerHouse1F/scripts.pory"
-	msgbox Fareward_PlayerHouse1F_Text_MomSeeNeighbors, MSGBOX_NPC
 # 71 "data/maps/PlayerHouse1F/scripts.pory"
+	lockall
+# 72 "data/maps/PlayerHouse1F/scripts.pory"
+	msgbox Fareward_PlayerHouse1F_Text_MomSeeNeighbors, MSGBOX_NPC
+# 73 "data/maps/PlayerHouse1F/scripts.pory"
 	releaseall
 	return
 
 
 Fareward_PlayerHouse1F_EventScript_Dad::
-# 75 "data/maps/PlayerHouse1F/scripts.pory"
+# 77 "data/maps/PlayerHouse1F/scripts.pory"
 	lockall
-# 76 "data/maps/PlayerHouse1F/scripts.pory"
+# 78 "data/maps/PlayerHouse1F/scripts.pory"
 	compare VAR_FAREWARD_INTRO_STATE, 2
 	goto_if_eq Fareward_PlayerHouse1F_EventScript_Dad_2
-# 80 "data/maps/PlayerHouse1F/scripts.pory"
+# 82 "data/maps/PlayerHouse1F/scripts.pory"
 	msgbox Fareward_PlayerHouse1F_Text_Dad2, MSGBOX_NPC
 Fareward_PlayerHouse1F_EventScript_Dad_1:
-# 82 "data/maps/PlayerHouse1F/scripts.pory"
+# 84 "data/maps/PlayerHouse1F/scripts.pory"
 	releaseall
 	return
 
 Fareward_PlayerHouse1F_EventScript_Dad_2:
-# 77 "data/maps/PlayerHouse1F/scripts.pory"
+# 79 "data/maps/PlayerHouse1F/scripts.pory"
 	msgbox Fareward_PlayerHouse1F_Text_Dad1, MSGBOX_NPC
 	goto Fareward_PlayerHouse1F_EventScript_Dad_1
 
 
-# 166 "data/maps/PlayerHouse1F/scripts.pory"
-Fareward_PlayerHouse1F_Movement_MomBeckons1:
-# 167 "data/maps/PlayerHouse1F/scripts.pory"
-	face_right
 # 168 "data/maps/PlayerHouse1F/scripts.pory"
+Fareward_PlayerHouse1F_Movement_MomBeckons1:
+# 169 "data/maps/PlayerHouse1F/scripts.pory"
+	face_right
+# 170 "data/maps/PlayerHouse1F/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 171 "data/maps/PlayerHouse1F/scripts.pory"
+# 173 "data/maps/PlayerHouse1F/scripts.pory"
 Fareward_PlayerHouse1F_Movement_MomBeckons2:
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 172 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_right
-# 173 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_up
-# 173 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_up
-# 173 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_up
-# 173 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_up
-# 173 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_up
-# 173 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_up
-# 173 "data/maps/PlayerHouse1F/scripts.pory"
-	walk_up
 # 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 174 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_right
+# 175 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_up
+# 175 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_up
+# 175 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_up
+# 175 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_up
+# 175 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_up
+# 175 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_up
+# 175 "data/maps/PlayerHouse1F/scripts.pory"
+	walk_up
+# 176 "data/maps/PlayerHouse1F/scripts.pory"
 	face_left
 	step_end
 
-# 177 "data/maps/PlayerHouse1F/scripts.pory"
-Fareward_PlayerHouse1F_Movement_HemlockConvo:
-# 178 "data/maps/PlayerHouse1F/scripts.pory"
-	face_down
 # 179 "data/maps/PlayerHouse1F/scripts.pory"
+Fareward_PlayerHouse1F_Movement_HemlockConvo:
+# 180 "data/maps/PlayerHouse1F/scripts.pory"
+	face_down
+# 181 "data/maps/PlayerHouse1F/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
 Fareward_PlayersHouse1F_Text_ParentsRoom::
-# 85 "data/maps/PlayerHouse1F/scripts.pory"
+# 87 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "The door to Mom and Dad's room.\n"
 	.string "I shouldn't go in without asking.$"
 
 Fareward_PlayerHouse1F_Text_ArtPiece::
-# 90 "data/maps/PlayerHouse1F/scripts.pory"
+# 92 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "A painting made by a famous artist from\n"
 	.string "the Kalos region.\p"
 	.string "I have trouble pronouncing her name.$"
 
 Fareward_PlayerHouse1F_Text_SmallBookshelf::
-# 96 "data/maps/PlayerHouse1F/scripts.pory"
+# 98 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "The bookshelf is neat and organized,\n"
 	.string "just the way Dad likes it.$"
 
 Fareward_PlayerHouse1F_Text_Bookshelf::
-# 101 "data/maps/PlayerHouse1F/scripts.pory"
+# 103 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "There's mostly books on rare pokémon\n"
 	.string "species and battle strategies, with a\l"
 	.string "few sci-fi and romance novels mixed in.$"
 
 Fareward_PlayerHouse1F_Text_MomBeckons1::
-# 107 "data/maps/PlayerHouse1F/scripts.pory"
+# 109 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} {PLAYER}!$"
 
 Fareward_PlayerHouse1F_Text_MomBeckons2::
-# 111 "data/maps/PlayerHouse1F/scripts.pory"
+# 113 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Could you come here? I've got some\n"
 	.string "exciting news to share!$"
 
 Fareward_PlayerHouse1F_Text_MomBeckons3::
-# 116 "data/maps/PlayerHouse1F/scripts.pory"
+# 118 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hi, sweetie. Are you feeling ready\n"
 	.string "for the big day today? You must be\l"
 	.string "so excited to receive your first\l"
@@ -260,7 +264,7 @@ Fareward_PlayerHouse1F_Text_MomBeckons3::
 	.string "You should stop by and say hello!$"
 
 Fareward_PlayerHouse1F_Text_HemlockConvo::
-# 134 "data/maps/PlayerHouse1F/scripts.pory"
+# 136 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Hemlock:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Ah, hello there {PLAYER}!\n"
 	.string "It's good to see you again! I arrived\l"
 	.string "just a few minutes ago. Your mother\l"
@@ -269,24 +273,24 @@ Fareward_PlayerHouse1F_Text_HemlockConvo::
 	.string "That's great to hear; I'm looking\l"
 	.string "forward to working with him.\p"
 	.string "Anyway! Why don't we go see if your\n"
-	.string "friends are ready to choose their first\l"
-	.string "pokémon!$"
+	.string "friends are ready to choose their\l"
+	.string "first pokémon!$"
 
 Fareward_PlayerHouse1F_Text_MomSeeNeighbors::
-# 147 "data/maps/PlayerHouse1F/scripts.pory"
+# 149 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mom:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Have you met the new neighbors\n"
 	.string "yet? They're moving into the house at\l"
 	.string "the east end of the street.$"
 
 Fareward_PlayerHouse1F_Text_Dad1::
-# 153 "data/maps/PlayerHouse1F/scripts.pory"
+# 155 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Dad:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hey, kiddo! How've you and Damon\n"
 	.string "been getting along? Tell his dad I'd\l"
 	.string "love to go have drinks with him\l"
 	.string "sometime soon, alright?$"
 
 Fareward_PlayerHouse1F_Text_Dad2::
-# 160 "data/maps/PlayerHouse1F/scripts.pory"
+# 162 "data/maps/PlayerHouse1F/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Dad:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hey, kiddo! I hope you're having\n"
 	.string "plenty of amazing experiences on your\l"
 	.string "journey out there.$"
