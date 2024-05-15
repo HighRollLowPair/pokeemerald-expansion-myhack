@@ -7,29 +7,62 @@ script Fareward_EventScript_DamonBattle {
 		case SPECIES_TURTWIG:
 			switch(var(VAR_SECOND_STARTER_MON)) {
 				case SPECIES_WATTREL:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_TURTWIG_WATTREL, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_TURTWIG_WATTREL, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 				case SPECIES_CROAGUNK:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_TURTWIG_CROAGUNK, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_TURTWIG_CROAGUNK, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 				case SPECIES_ROCKRUFF:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_TURTWIG_ROCKRUFF, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_TURTWIG_ROCKRUFF, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 			}
 		case SPECIES_CYNDAQUIL:
 			switch(var(VAR_SECOND_STARTER_MON)) {
 				case SPECIES_WATTREL:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_CYNDAQIL_WATTREL, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_CYNDAQUIL_WATTREL, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 				case SPECIES_CROAGUNK:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_CYNDAQIL_CROAGUNK, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_CYNDAQUIL_CROAGUNK, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 				case SPECIES_ROCKRUFF:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_CYNDAQIL_ROCKRUFF, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_CYNDAQUIL_ROCKRUFF, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 			}
 		case SPECIES_POPPLIO:
 			switch(var(VAR_SECOND_STARTER_MON)) {
 				case SPECIES_WATTREL:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_POPPLIO_WATTREL, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_POPPLIO_WATTREL, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 				case SPECIES_CROAGUNK:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_POPPLIO_CROAGUNK, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_POPPLIO_CROAGUNK, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
 				case SPECIES_ROCKRUFF:
-					trainerbattle_no_intro(TRAINER_DAMON_FAREWARD_POPPLIO_ROCKRUFF, Fareward_Text_DamonDefeated)
+					trainerbattle_earlyrival(TRAINER_DAMON_FAREWARD_POPPLIO_ROCKRUFF, RIVAL_BATTLE_TUTORIAL, Fareward_Text_DamonDefeated, Fareward_Text_DamonVictorous)
+			}
+	}
+    return
+}
+
+script Fareward_EventScript_HaleyBattle {
+	switch(var(VAR_STARTER_MON)) {
+		case SPECIES_TURTWIG:
+			switch(var(VAR_SECOND_STARTER_MON)) {
+				case SPECIES_WATTREL:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_TURTWIG_WATTREL, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+				case SPECIES_CROAGUNK:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_TURTWIG_CROAGUNK, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+				case SPECIES_ROCKRUFF:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_TURTWIG_ROCKRUFF, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+			}
+		case SPECIES_CYNDAQUIL:
+			switch(var(VAR_SECOND_STARTER_MON)) {
+				case SPECIES_WATTREL:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_CYNDAQUIL_WATTREL, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+				case SPECIES_CROAGUNK:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_CYNDAQUIL_CROAGUNK, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+				case SPECIES_ROCKRUFF:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_CYNDAQUIL_ROCKRUFF, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+			}
+		case SPECIES_POPPLIO:
+			switch(var(VAR_SECOND_STARTER_MON)) {
+				case SPECIES_WATTREL:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_POPPLIO_WATTREL, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+				case SPECIES_CROAGUNK:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_POPPLIO_CROAGUNK, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
+				case SPECIES_ROCKRUFF:
+					trainerbattle_earlyrival(TRAINER_HALEY_FAREWARD_POPPLIO_ROCKRUFF, RIVAL_BATTLE_TUTORIAL, Fareward_Text_HaleyDefeated, Fareward_Text_HaleyVictorous)
 			}
 	}
     return
@@ -37,4 +70,16 @@ script Fareward_EventScript_DamonBattle {
 
 text Fareward_Text_DamonDefeated {
     "Dang, I lost! Nice work, {PLAYER}!"
+}
+
+text Fareward_Text_DamonVictorous {
+	"I won! That was fun, {PLAYER}!"
+}
+
+text Fareward_Text_HaleyDefeated {
+    "Argh! Well at least I gave it a shot."
+}
+
+text Fareward_Text_HaleyVictorous {
+	"Wow, I actually did it!"
 }

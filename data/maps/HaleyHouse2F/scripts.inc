@@ -89,5 +89,5 @@ HaleyHouse2F_Text_PC::
 
 HaleyHouse2F_Text_Haley::
 # 63 "data/maps/HaleyHouse2F/scripts.pory"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Now where did I put those\n"
-	.string "repels...?$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Now where did I put\n"
+	.string "those repels...?$"

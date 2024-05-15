@@ -1214,7 +1214,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeLateStage
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfBirch = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfMaple = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -1229,7 +1229,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfBirch = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_ProfBirch,
+    .images = sPicTable_ProfMaple,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -1841,7 +1841,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VigorothFacingAway
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirchsBag = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaplesBag = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -1856,7 +1856,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirchsBag = {
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_BirchsBag,
+    .images = sPicTable_MaplesBag,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4330,7 +4330,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnionRoomAttendant
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Red = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Damon = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_RED_LEAF,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -4345,11 +4345,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Red = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Red,
+    .images = sPicTable_Damon,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Leaf = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Haley = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_RED_LEAF,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -4364,7 +4364,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Leaf = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Leaf,
+    .images = sPicTable_Haley,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

@@ -178,7 +178,7 @@ static const struct MatchCallStructNPC sMrStoneMatchCallHeader =
 {
     .type = MC_TYPE_NPC,
     .mapSec = MAPSEC_RUSTBORO_CITY,
-    .flag = 0xFFFF,
+    .flag = 0,
     .desc = gText_MrStoneMatchCallDesc,
     .name = gText_MrStoneMatchCallName,
     .textData = sMrStoneTextScripts
@@ -228,7 +228,7 @@ static const struct MatchCallStructNPC sMomMatchCallHeader =
 {
     .type = MC_TYPE_NPC,
     .mapSec = MAPSEC_FAREWARD,
-    .flag = FLAG_ENABLE_MOM_MATCH_CALL,
+    .flag = 0xFFFF,
     .desc = gText_MomMatchCallDesc,
     .name = gText_MomMatchCallName,
     .textData = sMomTextScripts

@@ -616,3 +616,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/FarewardHouse1/scripts.inc"
 
 	.include "data/maps/FarewardHouse2/scripts.inc"
+
+	.include "data/maps/Route249/scripts.inc"

@@ -34,11 +34,11 @@ static void SetMenuInputHandler(struct Pokenav_Menu *);
 // Number of entries - 1 for that menu type
 static const u8 sLastCursorPositions[] =
 {
-    [POKENAV_MENU_TYPE_DEFAULT]           = 2,
-    [POKENAV_MENU_TYPE_UNLOCK_MC]         = 3,
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] = 4,
-    [POKENAV_MENU_TYPE_CONDITION]         = 2,
-    [POKENAV_MENU_TYPE_CONDITION_SEARCH]  = 5
+    [POKENAV_MENU_TYPE_DEFAULT]                  = 2,
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION]         = 3,
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION_RIBBONS] = 4,
+    [POKENAV_MENU_TYPE_CONDITION]                = 2,
+    [POKENAV_MENU_TYPE_CONDITION_SEARCH]         = 5
 };
 
 static const u8 sMenuItems[][MAX_POKENAV_MENUITEMS] =
@@ -46,17 +46,17 @@ static const u8 sMenuItems[][MAX_POKENAV_MENUITEMS] =
     [POKENAV_MENU_TYPE_DEFAULT] =
     {
         POKENAV_MENUITEM_MAP,
-        POKENAV_MENUITEM_CONDITION,
+        POKENAV_MENUITEM_MATCH_CALL,
         [2 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC] =
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION] =
     {
         POKENAV_MENUITEM_MAP,
         POKENAV_MENUITEM_CONDITION,
         POKENAV_MENUITEM_MATCH_CALL,
         [3 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] =
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION_RIBBONS] =
     {
         POKENAV_MENUITEM_MAP,
         POKENAV_MENUITEM_CONDITION,
@@ -86,12 +86,12 @@ static u8 GetPokenavMainMenuType(void)
 {
     u8 menuType = POKENAV_MENU_TYPE_DEFAULT;
 
-    if (FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV))
+    if (FlagGet(FLAG_ADDED_CONDITION_TO_POKENAV))
     {
-        menuType = POKENAV_MENU_TYPE_UNLOCK_MC;
+        menuType = POKENAV_MENU_TYPE_UNLOCK_CONDITION;
 
         if (FlagGet(FLAG_SYS_RIBBON_GET))
-            menuType = POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS;
+            menuType = POKENAV_MENU_TYPE_UNLOCK_CONDITION_RIBBONS;
     }
 
     return menuType;
@@ -173,8 +173,8 @@ static void SetMenuInputHandler(struct Pokenav_Menu *menu)
     case POKENAV_MENU_TYPE_DEFAULT:
         SetPokenavMode(POKENAV_MODE_NORMAL);
         // fallthrough
-    case POKENAV_MENU_TYPE_UNLOCK_MC:
-    case POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS:
+    case POKENAV_MENU_TYPE_UNLOCK_CONDITION:
+    case POKENAV_MENU_TYPE_UNLOCK_CONDITION_RIBBONS:
         menu->callback = GetMainMenuInputHandler();
         break;
     case POKENAV_MENU_TYPE_CONDITION:

@@ -202,11 +202,11 @@ struct
         .deltaY = 20,
         .gfx = {
             sOptionsLabelGfx_RegionMap,
-            sOptionsLabelGfx_Condition,
+            sOptionsLabelGfx_MatchCall,
             sOptionsLabelGfx_SwitchOff
         }
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC] =
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION] =
     {
         .yStart = 42,
         .deltaY = 20,
@@ -217,7 +217,7 @@ struct
             sOptionsLabelGfx_SwitchOff
         }
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] =
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION_RIBBONS] =
     {
         .yStart = 42,
         .deltaY = 20,
@@ -267,7 +267,7 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
 
 static const u8 *const sPageDescriptions[] =
 {
-    [POKENAV_MENUITEM_MAP]                     = gText_CheckMapOfHoenn,
+    [POKENAV_MENUITEM_MAP]                     = gText_CheckMapOfXemek,
     [POKENAV_MENUITEM_CONDITION]               = gText_CheckPokemonInDetail,
     [POKENAV_MENUITEM_MATCH_CALL]              = gText_CallRegisteredTrainer,
     [POKENAV_MENUITEM_RIBBONS]                 = gText_CheckObtainedRibbons,

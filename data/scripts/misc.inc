@@ -18,4 +18,4 @@ gText_Locked::
 
 
 gText_GiveNicknameToMon::
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Should I give my {STR_VAR_1} a nickname?$"
+	.string "Should I give my {STR_VAR_1} a nickname?$"

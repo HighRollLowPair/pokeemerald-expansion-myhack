@@ -5606,6 +5606,7 @@ BattleScript_LocalBattleWonLoseTexts::
 	trainerslidein BS_ATTACKER
 	waitstate
 	printstring STRINGID_TRAINER1LOSETEXT
+	jumpifbattletype BATTLE_TYPE_FIRST_RIVAL, BattleScript_PayDayMoneyAndPickUpItems
 	jumpifnotbattletype BATTLE_TYPE_TWO_OPPONENTS, BattleScript_LocalBattleWonReward
 	trainerslideout B_POSITION_OPPONENT_LEFT
 	waitstate
@@ -5628,6 +5629,7 @@ BattleScript_LocalBattleLost::
 	jumpifbattletype BATTLE_TYPE_TRAINER_HILL, BattleScript_LocalBattleLostPrintTrainersWinText
 	jumpifbattletype BATTLE_TYPE_EREADER_TRAINER, BattleScript_LocalBattleLostEnd
 	jumpifhalfword CMP_EQUAL, gTrainerBattleOpponent_A, TRAINER_SECRET_BASE, BattleScript_LocalBattleLostEnd
+	jumpifbattletype BATTLE_TYPE_FIRST_RIVAL, BattleScript_LocalBattleLostPrintTrainersWinText
 BattleScript_LocalBattleLostPrintWhiteOut::
 .if B_WHITEOUT_MONEY >= GEN_4
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_LocalBattleLostEnd

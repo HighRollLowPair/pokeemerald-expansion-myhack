@@ -62,7 +62,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTree;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeEarlyStages;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeLateStages;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanAcroBike;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfBirch;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfMaple;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man4;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man5;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ReporterM;
@@ -95,7 +95,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayFieldMov
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Truck;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VigorothCarryingBox;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VigorothFacingAway;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirchsBag;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaplesBag;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemyZigzagoon;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Artist;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RivalBrendanNormal;
@@ -228,8 +228,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnionRoomAttendant;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sudowoodo;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mew;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Red;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Leaf;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Damon;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Haley;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Deoxys;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirthIslandStone;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brandon;
@@ -311,7 +311,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES] =  &gObjectEventGraphicsInfo_BerryTreeEarlyStages,
     [OBJ_EVENT_GFX_BERRY_TREE_LATE_STAGES] =   &gObjectEventGraphicsInfo_BerryTreeLateStages,
     [OBJ_EVENT_GFX_BRENDAN_ACRO_BIKE] =        &gObjectEventGraphicsInfo_BrendanAcroBike,
-    [OBJ_EVENT_GFX_PROF_HEMLOCK] =             &gObjectEventGraphicsInfo_ProfBirch,
+    [OBJ_EVENT_GFX_PROF_MAPLE] =               &gObjectEventGraphicsInfo_ProfMaple,
     [OBJ_EVENT_GFX_MAN_4] =                    &gObjectEventGraphicsInfo_Man4,
     [OBJ_EVENT_GFX_MAN_5] =                    &gObjectEventGraphicsInfo_Man5,
     [OBJ_EVENT_GFX_REPORTER_M] =               &gObjectEventGraphicsInfo_ReporterM,
@@ -344,7 +344,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TRUCK] =                    &gObjectEventGraphicsInfo_Truck,
     [OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX] =    &gObjectEventGraphicsInfo_VigorothCarryingBox,
     [OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY] =     &gObjectEventGraphicsInfo_VigorothFacingAway,
-    [OBJ_EVENT_GFX_BIRCHS_BAG] =               &gObjectEventGraphicsInfo_BirchsBag,
+    [OBJ_EVENT_GFX_MAPLES_BAG] =               &gObjectEventGraphicsInfo_MaplesBag,
     [OBJ_EVENT_GFX_ZIGZAGOON_1] =              &gObjectEventGraphicsInfo_EnemyZigzagoon,
     [OBJ_EVENT_GFX_ARTIST] =                   &gObjectEventGraphicsInfo_Artist,
     [OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL] =     &gObjectEventGraphicsInfo_RivalBrendanNormal,
@@ -477,8 +477,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_UNION_ROOM_NURSE] =         &gObjectEventGraphicsInfo_UnionRoomAttendant,
     [OBJ_EVENT_GFX_SUDOWOODO] =                &gObjectEventGraphicsInfo_Sudowoodo,
     [OBJ_EVENT_GFX_MEW] =                      &gObjectEventGraphicsInfo_Mew,
-    [OBJ_EVENT_GFX_DAMON] =                    &gObjectEventGraphicsInfo_Red,
-    [OBJ_EVENT_GFX_HALEY] =                    &gObjectEventGraphicsInfo_Leaf,
+    [OBJ_EVENT_GFX_DAMON] =                    &gObjectEventGraphicsInfo_Damon,
+    [OBJ_EVENT_GFX_HALEY] =                    &gObjectEventGraphicsInfo_Haley,
     [OBJ_EVENT_GFX_DEOXYS] =                   &gObjectEventGraphicsInfo_Deoxys,
     [OBJ_EVENT_GFX_DEOXYS_TRIANGLE] =          &gObjectEventGraphicsInfo_BirthIslandStone,
     [OBJ_EVENT_GFX_BRANDON] =                  &gObjectEventGraphicsInfo_Brandon,

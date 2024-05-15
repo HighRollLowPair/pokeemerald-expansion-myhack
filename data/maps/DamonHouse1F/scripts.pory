@@ -8,6 +8,12 @@ script DamonHouse1F_EventScript_Painting {
     releaseall
 }
 
+script DamonHouse1F_EventScript_ClefairyDoll {
+    lockall
+    msgbox(DamonHouse1F_Text_ClefairyDoll)
+    releaseall
+}
+
 script DamonHouse1F_EventScript_Basement {
     lockall
     msgbox(DamonHouse1F_Text_Basement)
@@ -29,13 +35,29 @@ script DamonHouse1F_EventScript_ParentsRoom {
     releaseall
 }
 
+script DamonHouse1F_EventScript_Dad {
+    lockall
+    msgbox(DamonHouse1F_Text_Dad, MSGBOX_NPC)
+    releaseall
+}
+
+script DamonHouse1F_EventScript_Sister {
+    lockall
+    msgbox(DamonHouse1F_Text_Sister, MSGBOX_NPC)
+    releaseall
+}
+
 text DamonHouse1F_Text_Painting {
     "What a beautiful landscape painting!"
 }
 
+text DamonHouse1F_Text_ClefairyDoll {
+    "A clefairy doll. Keesha's favorite!"
+}
+
 text DamonHouse1F_Text_Basement {
     "I shouldn't go into the basement without\n"
-    "Damon's parent's permission."
+    "Damon's dad's permission."
 }
 
 text DamonHouse1F_Text_SistersRoom {
@@ -44,8 +66,20 @@ text DamonHouse1F_Text_SistersRoom {
 }
 
 text DamonHouse1F_Text_ParentsRoom {
-    "Damon's parent's room. I should ask\n"
+    "Damon's dad's room. I should ask\n"
     "permission before going in."
+}
+
+text DamonHouse1F_Text_Dad {
+    "Hey there, {PLAYER}! It's good to see you\n"
+    "again. I trust you and Damon are still\l"
+    "getting along well?"
+}
+
+text DamonHouse1F_Text_Sister {
+    "Hi, {PLAYER}! Have you seen my brother?\n"
+    "Tell him I wanna play pokémon trainers\l"
+    "with him, ok?"
 }
 
 movement DamonHouse1F_Movement_Basement {

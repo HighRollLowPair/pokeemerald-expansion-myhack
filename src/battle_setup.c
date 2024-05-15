@@ -112,6 +112,7 @@ EWRAM_DATA static u8 *sTrainerABattleScriptRetAddr = NULL;
 EWRAM_DATA static u8 *sTrainerBBattleScriptRetAddr = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
+EWRAM_DATA static u16 sRivalBattleFlags = 0;
 
 // The first transition is used if the enemy Pokémon are lower level than our Pokémon.
 // Otherwise, the second transition is used.
@@ -210,6 +211,19 @@ static const struct TrainerBattleParameter sOrdinaryNoIntroBattleParams[] =
     {&sTrainerAIntroSpeech,         TRAINER_PARAM_CLEAR_VAL_32BIT},
     {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerVictorySpeech,        TRAINER_PARAM_CLEAR_VAL_32BIT},
+    {&sTrainerCannotBattleSpeech,   TRAINER_PARAM_CLEAR_VAL_32BIT},
+    {&sTrainerABattleScriptRetAddr, TRAINER_PARAM_CLEAR_VAL_32BIT},
+    {&sTrainerBattleEndScript,      TRAINER_PARAM_LOAD_SCRIPT_RET_ADDR},
+};
+
+static const struct TrainerBattleParameter sEarlyRivalBattleParams[] =
+{
+    {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
+    {&gTrainerBattleOpponent_A,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&sRivalBattleFlags,            TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&sTrainerAIntroSpeech,         TRAINER_PARAM_CLEAR_VAL_32BIT},
+    {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
+    {&sTrainerVictorySpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerCannotBattleSpeech,   TRAINER_PARAM_CLEAR_VAL_32BIT},
     {&sTrainerABattleScriptRetAddr, TRAINER_PARAM_CLEAR_VAL_32BIT},
     {&sTrainerBattleEndScript,      TRAINER_PARAM_LOAD_SCRIPT_RET_ADDR},
@@ -1156,6 +1170,9 @@ const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
             gTrainerBattleOpponent_B = LocalIdToHillTrainerId(gSpecialVar_LastTalked);
         }
         return EventScript_TryDoNormalTrainerBattle;
+    case TRAINER_BATTLE_EARLY_RIVAL:
+        TrainerBattleLoadArgs(sEarlyRivalBattleParams, data);
+        return EventScript_DoNoIntroTrainerBattle;
     default:
         if (gApproachingTrainerId == 0)
         {
@@ -1255,6 +1272,8 @@ void BattleSetup_StartTrainerBattle(void)
         gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TRAINER);
     else
         gBattleTypeFlags = (BATTLE_TYPE_TRAINER);
+    if (GetTrainerBattleMode() == TRAINER_BATTLE_EARLY_RIVAL)
+        gBattleTypeFlags |= BATTLE_TYPE_FIRST_RIVAL;
 
     if (InBattlePyramid())
     {
@@ -1344,26 +1363,37 @@ static void CB2_EndTrainerBattle(void)
 {
     HandleBattleVariantEndParty();
 
-    if (gTrainerBattleOpponent_A == TRAINER_SECRET_BASE)
+
+    if (sTrainerBattleMode == TRAINER_BATTLE_EARLY_RIVAL)
     {
-        DowngradeBadPoison();
+        gSpecialVar_Result = TRUE;
+        HealPlayerParty();
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-    }
-    else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
-    {
-        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()))
-            SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-        else
-            SetMainCallback2(CB2_WhiteOut);
+        SetBattledTrainersFlags();
     }
     else
     {
-        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-        DowngradeBadPoison();
-        if (!InBattlePyramid() && !InTrainerHillChallenge())
+        if (gTrainerBattleOpponent_A == TRAINER_SECRET_BASE)
         {
-            RegisterTrainerInMatchCall();
-            SetBattledTrainersFlags();
+            DowngradeBadPoison();
+            SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+        }
+        else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
+        {
+            if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()))
+                SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+            else
+                SetMainCallback2(CB2_WhiteOut);
+        }
+        else
+        {
+            SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+            DowngradeBadPoison();
+            if (!InBattlePyramid() && !InTrainerHillChallenge())
+            {
+                RegisterTrainerInMatchCall();
+                SetBattledTrainersFlags();
+            }
         }
     }
 }
@@ -1516,6 +1546,9 @@ void PlayTrainerEncounterMusic(void)
         case TRAINER_ENCOUNTER_MUSIC_DAMON:
             music = MUS_ENCOUNTER_BRENDAN;
             break;
+        case TRAINER_ENCOUNTER_MUSIC_HALEY:
+            music = MUS_ENCOUNTER_MAY;
+            break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;
         }
@@ -1560,7 +1593,8 @@ const u8 *GetTrainerBLoseText(void)
 
 const u8 *GetTrainerWonSpeech(void)
 {
-    return ReturnEmptyStringIfNull(sTrainerVictorySpeech);
+    StringExpandPlaceholders(gStringVar4, ReturnEmptyStringIfNull(sTrainerVictorySpeech));
+    return gStringVar4;
 }
 
 static const u8 *GetTrainerCantBattleSpeech(void)

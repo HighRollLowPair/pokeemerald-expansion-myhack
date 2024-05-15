@@ -210,9 +210,9 @@ PlayerHouse2F_Text_Dresser::
 PlayerHouse2F_Text_AsterSignature::
 # 115 "data/maps/PlayerHouse2F/scripts.pory"
 	.string "A poster with the signature of a\n"
-	.string "Champion-ranked trainer, Aster.\l"
-	.string "Mom got him to sign it for me when\l"
-	.string "I was younger.$"
+	.string "Champion-ranked trainer, Aster.\p"
+	.string "Mom got him to sign it for me\n"
+	.string "when I was younger.$"
 
 PlayerHouse2F_Text_Box1::
 # 122 "data/maps/PlayerHouse2F/scripts.pory"

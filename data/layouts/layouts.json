@@ -90,6 +90,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/FarewardHouse2/border.bin",
       "blockdata_filepath": "data/layouts/FarewardHouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE249",
+      "name": "Route249_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fareward",
+      "border_filepath": "data/layouts/Route249/border.bin",
+      "blockdata_filepath": "data/layouts/Route249/map.bin"
     }
   ]
 }

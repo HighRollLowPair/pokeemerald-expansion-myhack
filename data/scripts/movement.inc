@@ -44,6 +44,22 @@ Common_Movement_WalkInPlaceFasterDown:
 	walk_in_place_faster_down
 	step_end
 
+Common_Movement_WalkInPlaceFastLeft:
+	walk_in_place_fast_left
+	step_end
+
+Common_Movement_WalkInPlaceFastUp:
+	walk_in_place_fast_up
+	step_end
+
+Common_Movement_WalkInPlaceFastRight:
+	walk_in_place_fast_right
+	step_end
+
+Common_Movement_WalkInPlaceFastDown:
+	walk_in_place_fast_down
+	step_end
+
 Common_Movement_FaceRight:
 	face_right
 	step_end
@@ -99,6 +115,18 @@ Common_Movement_Delay32:
 
 Common_Movement_WalkUp:
 	walk_up
+	step_end
+
+Common_Movement_WalkDown:
+	walk_down
+	step_end
+
+Common_Movement_WalkLeft:
+	walk_left
+	step_end
+
+Common_Movement_WalkRight:
+	walk_right
 	step_end
 
 @ Unused

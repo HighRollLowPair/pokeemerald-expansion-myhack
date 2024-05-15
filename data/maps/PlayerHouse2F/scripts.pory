@@ -114,9 +114,9 @@ text PlayerHouse2F_Text_Dresser {
 
 text PlayerHouse2F_Text_AsterSignature {
     "A poster with the signature of a\n"
-    "Champion-ranked trainer, Aster.\l"
-    "Mom got him to sign it for me when\l"
-    "I was younger."
+    "Champion-ranked trainer, Aster.\p"
+    "Mom got him to sign it for me\n"
+    "when I was younger."
 }
 
 text PlayerHouse2F_Text_Box1 {

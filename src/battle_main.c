@@ -55,6 +55,7 @@
 #include "window.h"
 #include "constants/abilities.h"
 #include "constants/battle_move_effects.h"
+#include "constants/battle_setup.h"
 #include "constants/battle_string_ids.h"
 #include "constants/battle_partner.h"
 #include "constants/hold_effects.h"

@@ -61,6 +61,6 @@ text HaleyHouse2F_Text_PC {
 }
 
 text HaleyHouse2F_Text_Haley {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Now where did I put those\n"
-    "repels...?"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Now where did I put\n"
+    "those repels...?"
 }

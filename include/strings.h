@@ -393,7 +393,7 @@ extern const u8 gText_DefaultNameTerra[];
 extern const u8 gText_DefaultNameLucy[];
 extern const u8 gText_DefaultNameHalie[];
 
-extern const u8 gText_BirchInTrouble[];
+extern const u8 gText_MapleStarters[];
 extern const u8 gText_ConfirmStarterChoice[];
 
 // mystery event menu text
@@ -2654,7 +2654,7 @@ extern const u8 gText_Check[];
 extern const u8 gText_Cancel6[];
 
 // PokéNav Menu Handler
-extern const u8 gText_CheckMapOfHoenn[];
+extern const u8 gText_CheckMapOfXemek[];
 extern const u8 gText_CheckPokemonInDetail[];
 extern const u8 gText_CallRegisteredTrainer[];
 extern const u8 gText_CheckObtainedRibbons[];

@@ -1,3 +1,26 @@
 mapscripts FarewardHouse1_MapScripts {
     
 }
+
+script FarewardHouse1_EventScript_Woman {
+    lockall
+    msgbox(FarewardHouse1_Text_Woman, MSGBOX_NPC)
+    releaseall
+}
+
+script FarewardHouse1_EventScript_Man {
+    lockall
+    msgbox(FarewardHouse1_Text_Man, MSGBOX_NPC)
+    releaseall
+}
+
+text FarewardHouse1_Text_Woman {
+    "Such a beautiful day! My little yamper\n"
+    "will be so excited to go for a walk\l"
+    "in this weather."
+}
+
+text FarewardHouse1_Text_Man {
+    "Fareward is such a lovely, quiet town. I'm\n"
+    "so glad we decided to settle down here."
+}

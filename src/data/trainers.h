@@ -6286,7 +6286,7 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_FarewardRival3),
     },
 
-    [TRAINER_DAMON_FAREWARD_CYNDAQIL_WATTREL] =
+    [TRAINER_DAMON_FAREWARD_CYNDAQUIL_WATTREL] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_DAMON,
@@ -6298,7 +6298,7 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_FarewardRival4),
     },
 
-    [TRAINER_DAMON_FAREWARD_CYNDAQIL_CROAGUNK] =
+    [TRAINER_DAMON_FAREWARD_CYNDAQUIL_CROAGUNK] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_DAMON,
@@ -6310,7 +6310,7 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_FarewardRival5),
     },
 
-    [TRAINER_DAMON_FAREWARD_CYNDAQIL_ROCKRUFF] =
+    [TRAINER_DAMON_FAREWARD_CYNDAQUIL_ROCKRUFF] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_DAMON,
@@ -6358,112 +6358,112 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_FarewardRival9),
     },
 
-    [TRAINER_MAY_ROUTE_103_MUDKIP] =
+    [TRAINER_HALEY_FAREWARD_TURTWIG_WATTREL] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute103Mudkip),
+        .party = TRAINER_PARTY(sParty_FarewardRival9),
     },
 
-    [TRAINER_MAY_ROUTE_110_MUDKIP] =
+    [TRAINER_HALEY_FAREWARD_TURTWIG_CROAGUNK] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute110Mudkip),
+        .party = TRAINER_PARTY(sParty_FarewardRival7),
     },
 
-    [TRAINER_MAY_ROUTE_119_MUDKIP] =
+    [TRAINER_HALEY_FAREWARD_TURTWIG_ROCKRUFF] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute119Mudkip),
+        .party = TRAINER_PARTY(sParty_FarewardRival8),
     },
 
-    [TRAINER_MAY_ROUTE_103_TREECKO] =
+    [TRAINER_HALEY_FAREWARD_CYNDAQUIL_WATTREL] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute103Treecko),
+        .party = TRAINER_PARTY(sParty_FarewardRival3),
     },
 
-    [TRAINER_MAY_ROUTE_110_TREECKO] =
+    [TRAINER_HALEY_FAREWARD_CYNDAQUIL_CROAGUNK] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute110Treecko),
+        .party = TRAINER_PARTY(sParty_FarewardRival1),
     },
 
-    [TRAINER_MAY_ROUTE_119_TREECKO] =
+    [TRAINER_HALEY_FAREWARD_CYNDAQUIL_ROCKRUFF] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute119Treecko),
+        .party = TRAINER_PARTY(sParty_FarewardRival2),
     },
 
-    [TRAINER_MAY_ROUTE_103_TORCHIC] =
+    [TRAINER_HALEY_FAREWARD_POPPLIO_WATTREL] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute103Torchic),
+        .party = TRAINER_PARTY(sParty_FarewardRival6),
     },
 
-    [TRAINER_MAY_ROUTE_110_TORCHIC] =
+    [TRAINER_HALEY_FAREWARD_POPPLIO_CROAGUNK] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute110Torchic),
+        .party = TRAINER_PARTY(sParty_FarewardRival4),
     },
 
-    [TRAINER_MAY_ROUTE_119_TORCHIC] =
+    [TRAINER_HALEY_FAREWARD_POPPLIO_ROCKRUFF] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_MAY,
-        .trainerName = _("MAY"),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HALEY,
+        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerName = _("Haley"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute119Torchic),
+        .party = TRAINER_PARTY(sParty_FarewardRival5),
     },
 
     [TRAINER_ISAAC_1] =

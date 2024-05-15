@@ -5,7 +5,8 @@
     "gMapGroup_Dungeons"
   ],
   "gMapGroup_TownsAndRoutes": [
-    "Fareward"
+    "Fareward",
+    "Route249"
   ],
   "gMapGroup_IndoorFareward": [
     "PlayerHouse1F",

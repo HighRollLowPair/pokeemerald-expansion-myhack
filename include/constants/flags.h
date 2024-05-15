@@ -54,8 +54,8 @@
 #define FLAG_HIDE_DAMON_FAREWARD           0x29
 #define FLAG_HIDE_CHOOSE_STARTER           0x2A
 #define FLAG_CHOSEN_FIRST_BUT_NOT_SECOND   0x2B
-#define FLAG_HIDE_HEMLOCKS_BAG             0x2C
-#define FLAG_DONT_GAIN_EXP                 0x2D
+#define FLAG_HIDE_MAPLES_BAG             0x2C
+#define FLAG_UNUSED_0x02D    0x2D
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
@@ -326,7 +326,7 @@
 #define FLAG_RIVAL_LEFT_FOR_ROUTE103         0x12D
 #define FLAG_OMIT_DIVE_FROM_STEVEN_LETTER    0x12E
 #define FLAG_HAS_MATCH_CALL                  0x12F
-#define FLAG_ADDED_MATCH_CALL_TO_POKENAV     0x130
+#define FLAG_ADDED_CONDITION_TO_POKENAV      0x130
 #define FLAG_REGISTERED_STEVEN_POKENAV       0x131
 #define FLAG_ENABLE_NORMAN_MATCH_CALL        0x132
 #define FLAG_STEVEN_GUIDES_TO_CAVE_OF_ORIGIN 0x133 // Set after you follow Steven to the entrance of the Cave of Origin.
@@ -1500,7 +1500,7 @@
 
 #define FLAG_UNUSED_0x8E3                           (SYSTEM_FLAGS + 0x83) // Unused Flag
 
-#define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
+#define FLAG_RECEIVED_POKEDEX_FROM_MAPLE            (SYSTEM_FLAGS + 0x84)
 
 #define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
 #define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag

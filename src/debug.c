@@ -1262,7 +1262,7 @@ static u8 Debug_CheckToggleFlags(u8 id)
             result = FlagGet(FLAG_SYS_POKENAV_GET);
             break;
         case DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_MATCH_CALL:
-            result = FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV) && FlagGet(FLAG_HAS_MATCH_CALL);
+            result = FlagGet(FLAG_ADDED_CONDITION_TO_POKENAV) && FlagGet(FLAG_HAS_MATCH_CALL);
             break;
         case DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_RUN_SHOES:
             result = FlagGet(FLAG_SYS_B_DASH);
@@ -2741,16 +2741,16 @@ static void DebugAction_FlagsVars_SwitchPokeNav(u8 taskId)
 
 static void DebugAction_FlagsVars_SwitchMatchCall(u8 taskId)
 {
-    if (FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV))
+    if (FlagGet(FLAG_ADDED_CONDITION_TO_POKENAV))
     {
         PlaySE(SE_PC_OFF);
-        FlagClear(FLAG_ADDED_MATCH_CALL_TO_POKENAV);
+        FlagClear(FLAG_ADDED_CONDITION_TO_POKENAV);
         FlagClear(FLAG_HAS_MATCH_CALL);
     }
     else
     {
         PlaySE(SE_PC_LOGIN);
-        FlagSet(FLAG_ADDED_MATCH_CALL_TO_POKENAV);
+        FlagSet(FLAG_ADDED_CONDITION_TO_POKENAV);
         FlagSet(FLAG_HAS_MATCH_CALL);
     }
 }
