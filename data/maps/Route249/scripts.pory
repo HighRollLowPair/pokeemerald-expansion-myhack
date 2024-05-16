@@ -1,0 +1,24 @@
+mapscripts Route249_MapScripts {
+
+}
+
+script Route249_EventScript_Dylan {
+    trainerbattle_double(TRAINER_DYLAN_1, Route249_Text_DylanIntro, Route249_Text_DylanDefeated, gText_NotEnoughMons)
+    msgbox(Route249_Text_DylanPostBattle)
+    releaseall
+}
+
+text Route249_Text_DylanIntro {
+    "Are you a new pokémon trainer? Me too!\n"
+    "Let's see who's better!"
+}
+
+text Route249_Text_DylanDefeated {
+    "Dang, I guess I need to do\n"
+    "some more training."
+}
+
+text Route249_Text_DylanPostBattle {
+    "Looks like you're the better trainer\n"
+    "...for now, that is!"
+}

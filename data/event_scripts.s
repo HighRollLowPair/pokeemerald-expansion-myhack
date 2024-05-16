@@ -104,9 +104,6 @@ gStdScripts::
 	.4byte Std_MsgboxPokenav           @ MSGBOX_POKENAV
 gStdScripts_End::
 
-	.include "data/maps/Fareward/scripts.inc"
-	.include "data/maps/PlayerHouse1F/scripts.inc"
-
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/new_game.inc"
@@ -602,6 +599,10 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/Fareward/scripts.inc"
+	
+	.include "data/maps/PlayerHouse1F/scripts.inc"
 
 	.include "data/maps/PlayerHouse2F/scripts.inc"
 

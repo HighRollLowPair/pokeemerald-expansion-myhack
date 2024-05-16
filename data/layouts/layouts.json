@@ -94,8 +94,8 @@
     {
       "id": "LAYOUT_ROUTE249",
       "name": "Route249_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 22,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fareward",
       "border_filepath": "data/layouts/Route249/border.bin",
