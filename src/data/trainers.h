@@ -4308,12 +4308,12 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ABIGAIL_1] =
     {
-        .trainerClass = TRAINER_CLASS_TRIATHLETE,
+        .trainerClass = TRAINER_CLASS_LASS,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
-        .trainerName = _("ABIGAIL"),
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Abigail"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .party = TRAINER_PARTY(sParty_Abigail1),
     },

@@ -1,7 +1,7 @@
 EventScript_Window::
-	lock
-	msgbox gText_Window
-	release
+	lockall
+	msgbox gText_Window, MSGBOX_DEFAULT
+	releaseall
 	end
 
 gText_Window::

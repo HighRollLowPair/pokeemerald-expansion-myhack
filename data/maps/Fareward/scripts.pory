@@ -90,39 +90,15 @@ script Fareward_EventScript_Man {
 }
 
 script Fareward_EventScript_Lass {
-    lockall
     msgbox(Fareward_Text_Lass, MSGBOX_NPC)
-    releaseall
 }
 
 script Fareward_EventScript_Hiker {
-    lockall
     msgbox(Fareward_Text_Hiker, MSGBOX_NPC)
-    releaseall
 }
 
 script Fareward_EventScript_Sign1 {
-    lockall
     msgbox(Fareward_Text_Sign1, MSGBOX_SIGN)
-    releaseall
-}
-
-script Fareward_EventScript_Sign2 {
-    lockall
-    msgbox(Fareward_Text_Sign2, MSGBOX_SIGN)
-    releaseall
-}
-
-script Fareward_EventScript_Sign3 {
-    lockall
-    msgbox(Fareward_Text_Sign3, MSGBOX_SIGN)
-    releaseall
-}
-
-script Fareward_EventScript_Sign4 {
-    lockall
-    msgbox(Fareward_Text_Sign4, MSGBOX_SIGN)
-    releaseall
 }
 
 script Fareward_EventScript_Damon {
@@ -364,8 +340,22 @@ script Fareward_EventScript_GetStarter {
     closemessage
     applymovement(2, Fareward_Movement_GetStarter25)
     waitmovement(0)
-    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_POKE_BALL, 5)
+    closemessage
+    applymovement(2, Fareward_Movement_GetStarter26)
+    waitmovement(0)
+    delay(8)
+    applymovement(2, Fareward_Movement_GetStarter26)
+    waitmovement(0)
+    delay(8)
+    applymovement(2, Fareward_Movement_GetStarter27)
+    waitmovement(0)
     msgbox(Fareward_Text_GetStarter30)
+    closemessage
+    applymovement(2, Fareward_Movement_GetStarter25)
+    waitmovement(0)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(Fareward_Text_GetStarter31)
     waitfanfare
     closemessage
     applymovement(2, Fareward_Movement_GetStarter26)
@@ -375,7 +365,7 @@ script Fareward_EventScript_GetStarter {
     waitmovement(0)
     delay(8)
     applymovement(2, Fareward_Movement_GetStarter27)
-    msgbox(Fareward_Text_GetStarter31)
+    msgbox(Fareward_Text_GetStarter32)
     closemessage
     applymovement(5, Fareward_Movement_GetStarter3)
     waitmovement(0)
@@ -383,7 +373,7 @@ script Fareward_EventScript_GetStarter {
     applymovement(4, Common_Movement_FaceDown)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     waitmovement(4)
-    msgbox(Fareward_Text_GetStarter32)
+    msgbox(Fareward_Text_GetStarter33)
     closemessage
     applymovement(5, Fareward_Movement_GetStarter28)
     delay(60)
@@ -408,13 +398,13 @@ script Fareward_EventScript_GetStarter {
     waitmovement(OBJ_EVENT_ID_PLAYER)
     waitmovement(4)
     waitmovement(2)
-    msgbox(Fareward_Text_GetStarter33)
+    msgbox(Fareward_Text_GetStarter34)
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
     applymovement(4, Common_Movement_FaceUp)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     waitmovement(4)
-    msgbox(Fareward_Text_GetStarter34)
+    msgbox(Fareward_Text_GetStarter35)
     closemessage
     applymovement(2, Fareward_Movement_GetStarter29)
     waitmovement(0)
@@ -426,7 +416,7 @@ script Fareward_EventScript_GetStarter {
     delay(24)
     applymovement(2, Fareward_Movement_GetStarter31)
     waitmovement(0)
-    msgbox(Fareward_Text_GetStarter35)
+    msgbox(Fareward_Text_GetStarter36)
     closemessage
     applymovement(2, Fareward_Movement_GetStarter32)
     delay(48)
@@ -444,7 +434,7 @@ script Fareward_EventScript_GetStarter {
     applymovement(4, Common_Movement_FaceRight)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     waitmovement(4)
-    msgbox(Fareward_Text_GetStarter36)
+    msgbox(Fareward_Text_GetStarter37)
     closemessage
     applymovement(4, Fareward_Movement_GetStarter33)
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
@@ -521,20 +511,10 @@ text Fareward_Text_Hiker {
 
 text Fareward_Text_Sign1 {
     "Fareward\n"
-    "The newest town of Xemek."
-}
-
-text Fareward_Text_Sign2 {
-    "{DOWN_ARROW} Route 249"
-}
-
-text Fareward_Text_Sign3 {
-    "{UP_ARROW} Route 250"
-}
-
-text Fareward_Text_Sign4 {
-    "{RIGHT_ARROW} Route 251\n"
-    "{RIGHT_ARROW} {RIGHT_ARROW} Carnie's Butte"
+    "The new blooming town of eastern Xemek.\p"
+    "{DOWN_ARROW} Route 249\n"
+    "{UP_ARROW} Route 250\l"
+    "{RIGHT_ARROW} Route 251"
 }
 
 text Fareward_Text_Damon1 {
@@ -703,7 +683,7 @@ text Fareward_Text_GetStarter24 {
 }
 
 text Fareward_Text_GetStarter25 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Alright...here we go!"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Alright...here goes nothing!"
 }
 
 text Fareward_Text_GetStarter26 {
@@ -722,25 +702,37 @@ text Fareward_Text_GetStarter28 {
 }
 
 text Fareward_Text_GetStarter29 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} First, I want each of you\n"
-    "to take one of these."
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} First, I'd like each of you\n"
+    "to have these."
 }
 
 text Fareward_Text_GetStarter30 {
-    "{PLAYER} recevied a pokédex!"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I'm sure you already know\n"
+    "that you can use these poké balls to\l"
+    "catch wild pokémon.\p"
+    "Make sure to weaken your foe and\n"
+    "inflict it with a status condition\l"
+    "to make it easier to capture.\p"
+    "I also want each of you to take\n"
+    "one of these with you."
 }
 
 text Fareward_Text_GetStarter31 {
+    "{PLAYER} received a pokédex!"
+}
+
+text Fareward_Text_GetStarter32 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} They're called pokédexes.\n"
     "With them, you can record information\l"
     "about pokémon you see and catch.\p"
     "They're invaluable tools for\n"
     "any pokémon trainer.\p"
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Thank you, Professor!\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Thank you so much, Professor!\p"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Damon:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Yeah, thanks! This is super cool!\p"
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} So, I suggest you three\n"
-    "make your way down Route 249 toward\l"
-    "Remus, then head east to Grandelia.\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} It's my pleasure!\p"
+    "Now, I suggest you three make your way\n"
+    "down Route 249 toward Remus,\l"
+    "then head east to Grandelia.\p"
     "You can stop by my research laboratory\n"
     "there to check in.\p"
     "Anyway, I'm looking forward to seeing how\n"
@@ -754,16 +746,16 @@ text Fareward_Text_GetStarter31 {
     "gonna go catch all sorts of cool pokémon!"
 }
 
-text Fareward_Text_GetStarter32 {
+text Fareward_Text_GetStarter33 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Damon:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} See y'all later!"
 }
 
-text Fareward_Text_GetStarter33 {
+text Fareward_Text_GetStarter34 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Your friend can't stay still\n"
     "for very long, can he?"
 }
 
-text Fareward_Text_GetStarter34 {
+text Fareward_Text_GetStarter35 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I find his enthusiasm for\n"
     "pokémon to be quite infectious!\p"
     "I hope you two are just as excited for\n"
@@ -771,13 +763,13 @@ text Fareward_Text_GetStarter34 {
     "For now..."
 }
 
-text Fareward_Text_GetStarter35 {
+text Fareward_Text_GetStarter36 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I'd better head back to\n"
     "Grandelia and get back to my work.\p"
     "I hope to see you two again soon!"
 }
 
-text Fareward_Text_GetStarter36 {
+text Fareward_Text_GetStarter37 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Haley:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Well, I should let my parents know\n"
     "about all this before I head out.\p"
     "It was nice to meet you, {PLAYER}.\n"

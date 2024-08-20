@@ -36,15 +36,11 @@ script DamonHouse1F_EventScript_ParentsRoom {
 }
 
 script DamonHouse1F_EventScript_Dad {
-    lockall
     msgbox(DamonHouse1F_Text_Dad, MSGBOX_NPC)
-    releaseall
 }
 
 script DamonHouse1F_EventScript_Sister {
-    lockall
     msgbox(DamonHouse1F_Text_Sister, MSGBOX_NPC)
-    releaseall
 }
 
 text DamonHouse1F_Text_Painting {

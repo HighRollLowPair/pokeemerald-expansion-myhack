@@ -2,10 +2,57 @@ mapscripts Route249_MapScripts {
 
 }
 
+script Route249_EventScript_Boy {
+    msgbox(Route249_Text_Boy, MSGBOX_NPC)
+}
+
+script Route249_EventScript_Girl {
+    msgbox(Route249_Text_Girl, MSGBOX_NPC)
+}
+
+script Route249_EventScript_Azurill {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+    msgbox(Route249_Text_Azurill)
+    waitmoncry
+    release
+}
+
 script Route249_EventScript_Dylan {
     trainerbattle_double(TRAINER_DYLAN_1, Route249_Text_DylanIntro, Route249_Text_DylanDefeated, gText_NotEnoughMons)
     msgbox(Route249_Text_DylanPostBattle)
     releaseall
+}
+
+script Route249_EventScript_Abigail {
+    trainerbattle_double(TRAINER_ABIGAIL_1, Route249_Text_AbigailIntro, Route249_Text_AbigailDefeated, gText_NotEnoughMons)
+    msgbox(Route249_Text_AbigailPostBattle)
+    releaseall
+}
+
+script Route249_EventScript_Sign1 {
+    msgbox(Route249_Text_Sign1, MSGBOX_SIGN)
+}
+
+script Route249_EventScript_Sign2 {
+    msgbox(Route249_Text_Sign2, MSGBOX_SIGN)
+}
+
+text Route249_Text_Boy {
+    "Grassy routes like 249 may appear\n"
+    "serene and calming, but be careful of\l"
+    "the wild pokémon hiding in the grass!"
+}
+
+text Route249_Text_Girl {
+    "I love taking my pokémon out to play\n"
+    "around here. There's so much open space!"
+}
+
+text Route249_Text_Azurill {
+    "Azurill: Pop peep!"
 }
 
 text Route249_Text_DylanIntro {
@@ -21,4 +68,27 @@ text Route249_Text_DylanDefeated {
 text Route249_Text_DylanPostBattle {
     "Looks like you're the better trainer\n"
     "...for now, that is!"
+}
+
+text Route249_Text_AbigailIntro {
+    "Headed to Remus?\n"
+    "Let's have a battle first!"
+}
+
+text Route249_Text_AbigailDefeated {
+    "Wow, your pokémon are strong!"
+}
+
+text Route249_Text_AbigailPostBattle {
+    "Let's battle again sometime, alright?"
+}
+
+text Route249_Text_Sign1 {
+    "Route 249\n"
+    "{UP_ARROW} Fareward"
+}
+
+text Route249_Text_Sign2 {
+    "Route 249\n"
+    "{DOWN_ARROW} Remus"
 }

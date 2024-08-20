@@ -350,33 +350,27 @@
       "var": "VAR_FAREWARD_INTRO_STATE",
       "var_value": "4",
       "script": "Fareward_EventScript_ShouldGetStarter3"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_FAREWARD_INTRO_STATE",
+      "var_value": "2",
+      "script": "Fareward_EventScript_ShouldMeetNeighbors2"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_FAREWARD_INTRO_STATE",
+      "var_value": "4",
+      "script": "Fareward_EventScript_ShouldGetStarter2"
     }
   ],
   "bg_events": [
-    {
-      "type": "sign",
-      "x": 10,
-      "y": 28,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Fareward_EventScript_Sign2"
-    },
-    {
-      "type": "sign",
-      "x": 21,
-      "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Fareward_EventScript_Sign3"
-    },
-    {
-      "type": "sign",
-      "x": 28,
-      "y": 20,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Fareward_EventScript_Sign4"
-    },
     {
       "type": "sign",
       "x": 15,

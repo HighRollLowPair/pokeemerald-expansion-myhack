@@ -2,7 +2,7 @@ EventScript_TV::
 	lockall
 	msgbox gText_NothingInteresting, MSGBOX_DEFAULT
 	releaseall
-	return
+	end
 
 EventScript_TryDoTVShow::
 	specialvar VAR_0x8004, GetRandomActiveShowIdx

@@ -3,15 +3,11 @@ mapscripts FarewardHouse1_MapScripts {
 }
 
 script FarewardHouse1_EventScript_Woman {
-    lockall
     msgbox(FarewardHouse1_Text_Woman, MSGBOX_NPC)
-    releaseall
 }
 
 script FarewardHouse1_EventScript_Man {
-    lockall
     msgbox(FarewardHouse1_Text_Man, MSGBOX_NPC)
-    releaseall
 }
 
 text FarewardHouse1_Text_Woman {

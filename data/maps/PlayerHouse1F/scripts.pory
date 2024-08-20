@@ -68,30 +68,23 @@ script Fareward_PlayerHouse1F_EventScript_MapleConvo {
 }
 
 script Fareward_PlayerHouse1F_EventScript_MomSeeNeighbors {
-    lockall
     msgbox(Fareward_PlayerHouse1F_Text_MomSeeNeighbors, MSGBOX_NPC)
-    releaseall
 }
 
 script Fareward_PlayerHouse1F_EventScript_Dad {
-    lockall
     if (var(VAR_FAREWARD_INTRO_STATE) == 2) {
         msgbox(Fareward_PlayerHouse1F_Text_Dad1, MSGBOX_NPC)
     }
     else {
         msgbox(Fareward_PlayerHouse1F_Text_Dad2, MSGBOX_NPC)
     }
-    releaseall
 }
 
 script Fareward_PlayerHouse1F_EventScript_Mom {
-    lockall
     msgbox(Fareward_PlayerHouse1F_Text_Mom1, MSGBOX_NPC)
-    closemessage
     call(Common_EventScript_OutOfCenterPartyHeal)
     incrementgamestat(GAME_STAT_RESTED_AT_HOME)
     msgbox(Fareward_PlayerHouse1F_Text_Mom2, MSGBOX_NPC)
-    releaseall
 }
 
 text Fareward_PlayersHouse1F_Text_ParentsRoom {

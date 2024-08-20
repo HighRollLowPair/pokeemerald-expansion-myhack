@@ -94,7 +94,7 @@
     {
       "id": "LAYOUT_ROUTE249",
       "name": "Route249_Layout",
-      "width": 22,
+      "width": 24,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fareward",

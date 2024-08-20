@@ -194,7 +194,7 @@ Fareward_Text_DamonVictorous::
 
 Fareward_Text_HaleyDefeated::
 # 79 "data/scripts/rival_battles.pory"
-	.string "Argh! Well at least I gave it a shot.$"
+	.string "Aww! Well, at least I gave it a shot.$"
 
 Fareward_Text_HaleyVictorous::
 # 83 "data/scripts/rival_battles.pory"

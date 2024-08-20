@@ -60,61 +60,53 @@ DamonHouse1F_EventScript_ParentsRoom::
 
 DamonHouse1F_EventScript_Dad::
 # 39 "data/maps/DamonHouse1F/scripts.pory"
-	lockall
-# 40 "data/maps/DamonHouse1F/scripts.pory"
 	msgbox DamonHouse1F_Text_Dad, MSGBOX_NPC
-# 41 "data/maps/DamonHouse1F/scripts.pory"
-	releaseall
 	return
 
 
 DamonHouse1F_EventScript_Sister::
-# 45 "data/maps/DamonHouse1F/scripts.pory"
-	lockall
-# 46 "data/maps/DamonHouse1F/scripts.pory"
+# 43 "data/maps/DamonHouse1F/scripts.pory"
 	msgbox DamonHouse1F_Text_Sister, MSGBOX_NPC
-# 47 "data/maps/DamonHouse1F/scripts.pory"
-	releaseall
 	return
 
 
-# 85 "data/maps/DamonHouse1F/scripts.pory"
+# 81 "data/maps/DamonHouse1F/scripts.pory"
 DamonHouse1F_Movement_Basement:
-# 86 "data/maps/DamonHouse1F/scripts.pory"
+# 82 "data/maps/DamonHouse1F/scripts.pory"
 	walk_down
 	step_end
 
 DamonHouse1F_Text_Painting::
-# 50 "data/maps/DamonHouse1F/scripts.pory"
+# 46 "data/maps/DamonHouse1F/scripts.pory"
 	.string "What a beautiful landscape painting!$"
 
 DamonHouse1F_Text_ClefairyDoll::
-# 54 "data/maps/DamonHouse1F/scripts.pory"
+# 50 "data/maps/DamonHouse1F/scripts.pory"
 	.string "A clefairy doll. Keesha's favorite!$"
 
 DamonHouse1F_Text_Basement::
-# 58 "data/maps/DamonHouse1F/scripts.pory"
+# 54 "data/maps/DamonHouse1F/scripts.pory"
 	.string "I shouldn't go into the basement without\n"
 	.string "Damon's dad's permission.$"
 
 DamonHouse1F_Text_SistersRoom::
-# 63 "data/maps/DamonHouse1F/scripts.pory"
+# 59 "data/maps/DamonHouse1F/scripts.pory"
 	.string "Keesha's room. I shouldn't go in without\n"
 	.string "asking first.$"
 
 DamonHouse1F_Text_ParentsRoom::
-# 68 "data/maps/DamonHouse1F/scripts.pory"
+# 64 "data/maps/DamonHouse1F/scripts.pory"
 	.string "Damon's dad's room. I should ask\n"
 	.string "permission before going in.$"
 
 DamonHouse1F_Text_Dad::
-# 73 "data/maps/DamonHouse1F/scripts.pory"
+# 69 "data/maps/DamonHouse1F/scripts.pory"
 	.string "Hey there, {PLAYER}! It's good to see you\n"
 	.string "again. I trust you and Damon are still\l"
 	.string "getting along well?$"
 
 DamonHouse1F_Text_Sister::
-# 79 "data/maps/DamonHouse1F/scripts.pory"
+# 75 "data/maps/DamonHouse1F/scripts.pory"
 	.string "Hi, {PLAYER}! Have you seen my brother?\n"
 	.string "Tell him I wanna play pokémon trainers\l"
 	.string "with him, ok?$"

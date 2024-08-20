@@ -73,21 +73,15 @@ script HaleyHouse1F_EventScript_MomIntroduction {
 }
 
 script HaleyHouse1F_EventScript_Mom1 {
-    lockall
     msgbox(HaleyHouse1F_Text_Mom1, MSGBOX_NPC)
-    releaseall
 }
 
 script HaleyHouse1F_EventScript_Mom2 {
-    lockall
     msgbox(HaleyHouse1F_Text_Mom2, MSGBOX_NPC)
-    releaseall
 }
 
 script HaleyHouse1F_EventScript_Dad {
-    lockall
     msgbox(HaleyHouse1F_Text_Dad, MSGBOX_NPC)
-    releaseall
 }
 
 text HaleyHouse1F_Text_Cabinet {
@@ -97,8 +91,8 @@ text HaleyHouse1F_Text_Cabinet {
 }
 
 text HaleyHouse1F_Text_ParentsRoom {
-    "I probably shouldn't go into\n"
-    "Haley's parent's room without permission."
+    "I shouldn't go into Haley's\n"
+    "parent's room without permission."
 }
 
 text HaleyHouse1F_Text_MomIntroduction1 {
@@ -158,8 +152,8 @@ text HaleyHouse1F_Text_Mom1 {
 
 text HaleyHouse1F_Text_Mom2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Margot:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Hello there, {PLAYER}!\n"
-    "I hope you and Haley are\l"
-    "getting along well.\p"
+    "I hope you and Haley are getting along\l"
+    "well.\p"
     "Where's David? He's at Professor\n"
     "Maple's lab in Grandelia.\p"
     "I'm sure he's doing lots of\n"
