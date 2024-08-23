@@ -1694,6 +1694,15 @@ bool8 ScrCmd_bufferitemnameplural(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_bufferavsan(struct ScriptContext *ctx)
+{
+    u8 stringVarIndex = ScriptReadByte(ctx);
+    u16 itemId = VarGet(ScriptReadHalfword(ctx));
+
+    HandleAVsAn(itemId, sScriptStringVars[stringVarIndex]);
+    return FALSE;
+}
+
 bool8 ScrCmd_bufferdecorationname(struct ScriptContext *ctx)
 {
     u8 stringVarIndex = ScriptReadByte(ctx);

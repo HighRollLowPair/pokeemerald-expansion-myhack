@@ -87,6 +87,10 @@ void CopyItemName(u16 itemId, u8 *dst)
 }
 
 const u8 sText_s[] =_("s");
+const u8 array_an[] =_("AEIOUX");
+const u8 size_an = 6;
+const u8 sText_an[] =_("an");
+const u8 sText_a[] =_("a");
 
 void CopyItemNameHandlePlural(u16 itemId, u8 *dst, u32 quantity)
 {
@@ -99,6 +103,20 @@ void CopyItemNameHandlePlural(u16 itemId, u8 *dst, u32 quantity)
         StringCopy(dst, ItemId_GetPluralName(itemId));
     else
         StringAppend(end, sText_s);
+}
+
+void HandleAVsAn(u16 itemId, u8 *dst)
+{
+    const u8 *end = ItemId_GetName(itemId);
+    for (u8 i = 0; i < size_an; i++)
+    {
+        if (end[0] == array_an[i])
+        {
+            StringCopy(dst, sText_an);
+            return;
+        }
+    }
+    StringCopy(dst, sText_a);
 }
 
 bool8 IsBagPocketNonEmpty(u8 pocket)

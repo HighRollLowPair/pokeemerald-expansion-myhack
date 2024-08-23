@@ -1789,6 +1789,12 @@
 	.2byte \quantity
 	.endm
 
+	.macro bufferavsan stringVarId:req, item:req
+	.byte 0xe5
+	stringvar \stringVarId
+	.2byte \item
+	.endm
+
 	.macro _dynmultichoice left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req argv:vararg
 	.byte 0xe3
 	.2byte \left

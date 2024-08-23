@@ -153,6 +153,7 @@ EventScript_FoundItem::
 	message gText_PlayerFoundItems
 	return
 EventScript_FoundItemMessage::
+	bufferavsan STR_VAR_1, VAR_0x8004
 	message gText_PlayerFoundOneItem
 	return
 
