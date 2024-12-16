@@ -7,7 +7,8 @@
 
 // gMapGroup_TownsAndRoutes
 #define MAP_FAREWARD (0 | (0 << 8))
-#define MAP_ROUTE249 (1 | (0 << 8))
+#define MAP_REMUS    (1 | (0 << 8))
+#define MAP_ROUTE249 (2 | (0 << 8))
 
 // gMapGroup_IndoorFareward
 #define MAP_PLAYER_HOUSE1F          (0 | (1 << 8))

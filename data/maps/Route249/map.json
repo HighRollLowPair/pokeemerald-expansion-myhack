@@ -17,6 +17,11 @@
       "map": "MAP_FAREWARD",
       "offset": -2,
       "direction": "up"
+    },
+    {
+      "map": "MAP_REMUS",
+      "offset": -6,
+      "direction": "down"
     }
   ],
   "object_events": [

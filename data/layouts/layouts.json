@@ -100,6 +100,26 @@
       "secondary_tileset": "gTileset_Fareward",
       "border_filepath": "data/layouts/Route249/border.bin",
       "blockdata_filepath": "data/layouts/Route249/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE250",
+      "name": "Route250_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fareward",
+      "border_filepath": "data/layouts/Route250/border.bin",
+      "blockdata_filepath": "data/layouts/Route250/map.bin"
+    },
+    {
+      "id": "LAYOUT_REMUS",
+      "name": "Remus_Layout",
+      "width": 48,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fareward",
+      "border_filepath": "data/layouts/Remus/border.bin",
+      "blockdata_filepath": "data/layouts/Remus/map.bin"
     }
   ]
 }

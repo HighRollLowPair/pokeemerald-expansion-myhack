@@ -42,7 +42,7 @@ script Route249_EventScript_Sign2 {
 
 text Route249_Text_Boy {
     "Grassy routes like 249 may appear\n"
-    "serene and calming, but be careful of\l"
+    "calm and serene, but be careful of\l"
     "the wild pokémon hiding in the grass!"
 }
 
@@ -66,8 +66,8 @@ text Route249_Text_DylanDefeated {
 }
 
 text Route249_Text_DylanPostBattle {
-    "Looks like you're the better trainer\n"
-    "...for now, that is!"
+    "Looks like you're the better trainer...\p"
+    "For now, that is!"
 }
 
 text Route249_Text_AbigailIntro {

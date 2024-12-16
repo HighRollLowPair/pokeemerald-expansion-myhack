@@ -1401,7 +1401,7 @@ Fareward_Text_Hiker::
 Fareward_Text_Sign1::
 # 512 "data/maps/Fareward/scripts.pory"
 	.string "Fareward\n"
-	.string "The new blooming town of eastern Xemek.\p"
+	.string "The new blooming town of east Xemek.\p"
 	.string "{DOWN_ARROW} Route 249\n"
 	.string "{UP_ARROW} Route 250\l"
 	.string "{RIGHT_ARROW} Route 251$"
@@ -1608,11 +1608,11 @@ Fareward_Text_GetStarter30::
 
 Fareward_Text_GetStarter31::
 # 720 "data/maps/Fareward/scripts.pory"
-	.string "{PLAYER} received a pokédex!$"
+	.string "{PLAYER} received a Pokédex!$"
 
 Fareward_Text_GetStarter32::
 # 724 "data/maps/Fareward/scripts.pory"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} They're called pokédexes.\n"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} They're called Pokédexes.\n"
 	.string "With them, you can record information\l"
 	.string "about pokémon you see and catch.\p"
 	.string "They're invaluable tools for\n"

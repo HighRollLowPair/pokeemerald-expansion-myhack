@@ -67,7 +67,7 @@ Route249_EventScript_Sign2::
 Route249_Text_Boy::
 # 43 "data/maps/Route249/scripts.pory"
 	.string "Grassy routes like 249 may appear\n"
-	.string "serene and calming, but be careful of\l"
+	.string "calm and serene, but be careful of\l"
 	.string "the wild pokémon hiding in the grass!$"
 
 Route249_Text_Girl::
@@ -91,8 +91,8 @@ Route249_Text_DylanDefeated::
 
 Route249_Text_DylanPostBattle::
 # 68 "data/maps/Route249/scripts.pory"
-	.string "Looks like you're the better trainer\n"
-	.string "...for now, that is!$"
+	.string "Looks like you're the better trainer...\p"
+	.string "For now, that is!$"
 
 Route249_Text_AbigailIntro::
 # 73 "data/maps/Route249/scripts.pory"

@@ -511,7 +511,7 @@ text Fareward_Text_Hiker {
 
 text Fareward_Text_Sign1 {
     "Fareward\n"
-    "The new blooming town of eastern Xemek.\p"
+    "The new blooming town of east Xemek.\p"
     "{DOWN_ARROW} Route 249\n"
     "{UP_ARROW} Route 250\l"
     "{RIGHT_ARROW} Route 251"
@@ -718,11 +718,11 @@ text Fareward_Text_GetStarter30 {
 }
 
 text Fareward_Text_GetStarter31 {
-    "{PLAYER} received a pokédex!"
+    "{PLAYER} received a Pokédex!"
 }
 
 text Fareward_Text_GetStarter32 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} They're called pokédexes.\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Maple:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} They're called Pokédexes.\n"
     "With them, you can record information\l"
     "about pokémon you see and catch.\p"
     "They're invaluable tools for\n"
