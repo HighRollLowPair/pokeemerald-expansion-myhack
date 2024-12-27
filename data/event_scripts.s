@@ -623,3 +623,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route250/scripts.inc"
 
 	.include "data/maps/Remus/scripts.inc"
+
+	.include "data/maps/RemusPokemonCenter/scripts.inc"

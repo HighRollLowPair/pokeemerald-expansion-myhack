@@ -20,8 +20,11 @@
 #define MAP_FAREWARD_HOUSE1         (6 | (1 << 8))
 #define MAP_FAREWARD_HOUSE2         (7 | (1 << 8))
 
+// gMapGroup_IndoorRemus
+#define MAP_REMUS_POKEMON_CENTER (0 | (2 << 8))
+
 // gMapGroup_Dungeons
 
-#define MAP_GROUPS_COUNT 3
+#define MAP_GROUPS_COUNT 4
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

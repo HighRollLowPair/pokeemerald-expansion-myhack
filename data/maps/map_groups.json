@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorFareward",
+    "gMapGroup_IndoorRemus",
     "gMapGroup_Dungeons"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -18,6 +19,9 @@
     "DamonHouseDamonsRoom",
     "FarewardHouse1",
     "FarewardHouse2"
+  ],
+  "gMapGroup_IndoorRemus": [
+    "RemusPokemonCenter"
   ],
   "gMapGroup_Dungeons": [
 

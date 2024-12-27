@@ -120,6 +120,16 @@
       "secondary_tileset": "gTileset_Fareward",
       "border_filepath": "data/layouts/Remus/border.bin",
       "blockdata_filepath": "data/layouts/Remus/map.bin"
+    },
+    {
+      "id": "LAYOUT_REMUS_POKEMON_CENTER",
+      "name": "RemusPokemonCenter_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/RemusPokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/RemusPokemonCenter/map.bin"
     }
   ]
 }
