@@ -18,14 +18,14 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	incrementgamestat GAME_STAT_USED_POKECENTER
 	call_if_eq VAR_0x8004, 0, EventScript_PkmnCenterNurse_IllTakeYourPkmn
 	call_if_eq VAR_0x8004, 1, EventScript_PkmnCenterNurse_IllTakeYourPkmn2
-	waitmessage
+	closemessage
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
 	goto_if_unset FLAG_POKERUS_EXPLAINED, EventScript_PkmnCenterNurse_CheckPokerus
 	call EventScript_PkmnCenterNurse_ReturnPkmn
 	end
 
 EventScript_PkmnCenterNurse_IllTakeYourPkmn::
-	message gText_IllTakeYourPkmn
+	msgbox gText_IllTakeYourPkmn
 	return
 
 EventScript_PkmnCenterNurse_IllTakeYourPkmn2::
@@ -33,13 +33,11 @@ EventScript_PkmnCenterNurse_IllTakeYourPkmn2::
 	return
 
 EventScript_PkmnCenterNurse_TakeAndHealPkmn::
-	applymovement VAR_0x800B, Common_Movement_WalkUp
-	waitmovement 0
-	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterRight
+	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Walk1
 	waitmovement 0
 	dofieldeffect FLDEFF_POKECENTER_HEAL
 	waitfieldeffect FLDEFF_POKECENTER_HEAL
-	applymovement VAR_0x800B, Common_Movement_WalkDown
+	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Walk2
 	waitmovement 0
 	special HealPlayerParty
 	return
@@ -117,6 +115,38 @@ EventScript_PkmnCenterNurse_GoldCardHealPkmn::
 	setvar VAR_0x8004, 1
 	goto EventScript_PkmnCenterNurse_HealPkmn
 	end
+
+Movement_PkmnCenterNurse_Walk1:
+	walk_up
+	walk_in_place_fast_right
+	step_end
+
+Movement_PkmnCenterNurse_Walk2:
+	delay_8
+	walk_left
+	delay_16
+	delay_16
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	delay_16
+	delay_8
+	face_right
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_8
+	walk_right
+	delay_4
+	walk_in_place_fast_right
+	delay_16
+	walk_down
+	step_end
 
 Movement_PkmnCenterNurse_Bow:
 	nurse_joy_bow

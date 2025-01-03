@@ -18,7 +18,8 @@ EventScript_Nurse::
 	call Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastDown
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	release
 	end

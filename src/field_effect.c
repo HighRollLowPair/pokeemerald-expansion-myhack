@@ -574,9 +574,7 @@ static const struct SpriteTemplate sSpriteTemplate_HofMonitorSmall =
 static void (*const sPokecenterHealEffectFuncs[])(struct Task *) =
 {
     PokecenterHealEffect_Init,
-    PokecenterHealEffect_WaitForBallPlacement,
-    PokecenterHealEffect_WaitForBallFlashing,
-    PokecenterHealEffect_WaitForSoundAndEnd
+    PokecenterHealEffect_WaitForBallPlacement
 };
 
 static void (*const sHallOfFameRecordEffectFuncs[])(struct Task *) =
@@ -1042,13 +1040,15 @@ static void PokecenterHealEffect_Init(struct Task *task)
 
 static void PokecenterHealEffect_WaitForBallPlacement(struct Task *task)
 {
-    if (gSprites[task->tBallSpriteId].sState > 1)
+    if (gSprites[task->tBallSpriteId].sState > 0)
     {
         gSprites[task->tMonitorSpriteId].sState++;
-        task->tState++;
+        FieldEffectActiveListRemove(FLDEFF_POKECENTER_HEAL);
+        DestroyTask(FindTaskIdByFunc(Task_PokecenterHeal));
     }
 }
 
+/*
 static void PokecenterHealEffect_WaitForBallFlashing(struct Task *task)
 {
     if (gSprites[task->tBallSpriteId].sState > 4)
@@ -1056,7 +1056,9 @@ static void PokecenterHealEffect_WaitForBallFlashing(struct Task *task)
         task->tState++;
     }
 }
+*/
 
+/*
 static void PokecenterHealEffect_WaitForSoundAndEnd(struct Task *task)
 {
     if (gSprites[task->tBallSpriteId].sState > 6)
@@ -1066,6 +1068,7 @@ static void PokecenterHealEffect_WaitForSoundAndEnd(struct Task *task)
         DestroyTask(FindTaskIdByFunc(Task_PokecenterHeal));
     }
 }
+*/
 
 bool8 FldEff_HallOfFameRecord(void)
 {
@@ -1161,7 +1164,7 @@ static void PokeballGlowEffect_PlaceBalls(struct Sprite *sprite)
     }
     if (sprite->sNumMons == 0)
     {
-        sprite->sTimer = 32;
+        sprite->sTimer = 112;
         sprite->sState++;
     }
 }
@@ -1235,12 +1238,18 @@ static void PokeballGlowEffect_Flash2(struct Sprite *sprite)
 static void PokeballGlowEffect_WaitAfterFlash(struct Sprite *sprite)
 {
     if ((--sprite->sTimer) == 0)
+    {
+        sprite->sTimer = 16;
         sprite->sState++;
+    }
 }
 
 static void PokeballGlowEffect_Dummy(struct Sprite *sprite)
 {
-    sprite->sState++;
+    if ((--sprite->sTimer) == 0)
+    {
+        sprite->sState++;
+    }
 }
 
 static void PokeballGlowEffect_WaitForSound(struct Sprite *sprite)
@@ -1253,12 +1262,12 @@ static void PokeballGlowEffect_WaitForSound(struct Sprite *sprite)
 
 static void PokeballGlowEffect_Idle(struct Sprite *sprite)
 {
-    // Idle until destroyed
+    DestroySprite(&gSprites[sprite->sSpriteId]);
 }
 
 static void SpriteCB_PokeballGlow(struct Sprite *sprite)
 {
-    if (gSprites[sprite->sEffectSpriteId].sState > 4)
+    if (gSprites[sprite->sEffectSpriteId].sState > 5)
     {
         FieldEffectFreeGraphicsResources(sprite);
     }
@@ -1280,9 +1289,16 @@ static void SpriteCB_PokecenterMonitor(struct Sprite *sprite)
 {
     if (sprite->data[0] != 0)
     {
-        sprite->data[0] = 0;
-        sprite->invisible = FALSE;
-        StartSpriteAnim(sprite, 1);
+        if (sprite->sTimer == 0)
+        {
+            sprite->sTimer = 112;
+        }
+        if ((--sprite->sTimer == 0))
+        {
+            sprite->data[0] = 0;
+            sprite->invisible = FALSE;
+            StartSpriteAnim(sprite, 1);
+        }
     }
     if (sprite->animEnded)
     {
