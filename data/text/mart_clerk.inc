@@ -1,6 +1,6 @@
 gText_HowMayIServeYou::
 	.string "Welcome!\p"
-	.string "How may I serve you?$"
+	.string "What can I do for you today?$"
 
 gText_PleaseComeAgain::
 	.string "Please come again!$"

@@ -126,10 +126,10 @@ Movement_PkmnCenterNurse_Walk2:
 	walk_left
 	delay_16
 	delay_16
-	walk_in_place_fast_left
-	walk_in_place_fast_left
+	walk_in_place_left
+	walk_in_place_left
 	delay_16
-	delay_8
+	delay_4
 	face_right
 	delay_16
 	delay_16
@@ -140,7 +140,7 @@ Movement_PkmnCenterNurse_Walk2:
 	delay_16
 	delay_16
 	delay_16
-	delay_8
+	delay_2
 	walk_right
 	delay_4
 	walk_in_place_fast_right

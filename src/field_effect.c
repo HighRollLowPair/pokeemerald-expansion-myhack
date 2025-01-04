@@ -43,8 +43,6 @@ EWRAM_DATA s32 gFieldEffectArguments[8] = {0};
 static void Task_PokecenterHeal(u8 taskId);
 static void PokecenterHealEffect_Init(struct Task *);
 static void PokecenterHealEffect_WaitForBallPlacement(struct Task *);
-static void PokecenterHealEffect_WaitForBallFlashing(struct Task *);
-static void PokecenterHealEffect_WaitForSoundAndEnd(struct Task *);
 static u8 CreatePokecenterMonitorSprite(s16, s16);
 static void SpriteCB_PokecenterMonitor(struct Sprite *);
 
@@ -1047,28 +1045,6 @@ static void PokecenterHealEffect_WaitForBallPlacement(struct Task *task)
         DestroyTask(FindTaskIdByFunc(Task_PokecenterHeal));
     }
 }
-
-/*
-static void PokecenterHealEffect_WaitForBallFlashing(struct Task *task)
-{
-    if (gSprites[task->tBallSpriteId].sState > 4)
-    {
-        task->tState++;
-    }
-}
-*/
-
-/*
-static void PokecenterHealEffect_WaitForSoundAndEnd(struct Task *task)
-{
-    if (gSprites[task->tBallSpriteId].sState > 6)
-    {
-        DestroySprite(&gSprites[task->tBallSpriteId]);
-        FieldEffectActiveListRemove(FLDEFF_POKECENTER_HEAL);
-        DestroyTask(FindTaskIdByFunc(Task_PokecenterHeal));
-    }
-}
-*/
 
 bool8 FldEff_HallOfFameRecord(void)
 {

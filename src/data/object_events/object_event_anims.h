@@ -217,6 +217,13 @@ static const union AnimCmd sAnim_GoNorth[] =
     ANIMCMD_JUMP(0),
 };
 
+static const union AnimCmd sAmin_NurseNorth[] =
+{
+    ANIMCMD_FRAME(5, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_JUMP(0),
+};
+
 static const union AnimCmd sAnim_GoWest[] =
 {
     ANIMCMD_FRAME(7, 8),
@@ -602,7 +609,7 @@ static const union AnimCmd sAnim_BerryTreeStage4[] =
 static const union AnimCmd sAnim_NurseBow[] =
 {
     ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(9, 32),
+    ANIMCMD_FRAME(6, 32),
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_END,
 };
@@ -1079,7 +1086,7 @@ static const union AnimCmd *const sAnimTable_Nurse[] = {
     [ANIM_STD_FACE_WEST] = sAnim_FaceWest,
     [ANIM_STD_FACE_EAST] = sAnim_FaceEast,
     [ANIM_STD_GO_SOUTH] = sAnim_GoSouth,
-    [ANIM_STD_GO_NORTH] = sAnim_GoNorth,
+    [ANIM_STD_GO_NORTH] = sAmin_NurseNorth,
     [ANIM_STD_GO_WEST] = sAnim_GoWest,
     [ANIM_STD_GO_EAST] = sAnim_GoEast,
     [ANIM_STD_GO_FAST_SOUTH] = sAnim_GoFastSouth,

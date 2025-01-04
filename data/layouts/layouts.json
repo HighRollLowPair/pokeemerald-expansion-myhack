@@ -125,7 +125,7 @@
       "id": "LAYOUT_REMUS_POKEMON_CENTER",
       "name": "RemusPokemonCenter_Layout",
       "width": 17,
-      "height": 12,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/RemusPokemonCenter/border.bin",
